@@ -11,11 +11,9 @@ Light and modern Atomic UI Library;
 - Tailwindcss 4
 - Framer motion 12
 
-## Features
+## Components
 
-### Components
-
-#### Atoms
+### Atoms
 
 - Avatar
 - Badge
@@ -23,7 +21,7 @@ Light and modern Atomic UI Library;
 - IconButton
 - Input
 
-#### Molecules
+### Molecules
 
 - Card
 - Form
@@ -31,43 +29,43 @@ Light and modern Atomic UI Library;
 - InputGroup
 - ThemeSwitcher
 
-#### Organisms
+### Organisms
 
 - Carousel
 - Dashboard
 - LoginForm
 - SidebarMenu
 
-#### Foundations
+### Foundations
 
 - Grid
 - ThemeProvider
 - ErrorBoundary
 - Language switcher ??
 
-#### Templates
+### Templates
 
 - BaseTemplate
 
-#### Pages
+### Pages
 
 - HomePage
 
-### New React 19 hooks included :
+## New React 19 hooks included :
 
 - useTransition to handle pending / loading state in interactive components
 
-### Accessibility
+## Accessibility
 
 - RGAA conformity ?
 
-### SEO
+## SEO
 
 - Head component with meta tags as props
 
-### Performance
+## Performance
 
 - Lazy loading
 - Light icon set ??
 
-### Server components ??
+## Server components ??
