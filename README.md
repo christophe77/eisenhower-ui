@@ -13,6 +13,46 @@ Light and modern Atomic UI Library;
 
 ## Features
 
+### Components
+
+#### Atoms
+
+- Avatar
+- Badge
+- Button
+- IconButton
+- Input
+
+#### Molecules
+
+- Card
+- Form
+- Header
+- InputGroup
+- ThemeSwitcher
+
+#### Organisms
+
+- Carousel
+- Dashboard
+- LoginForm
+- SidebarMenu
+
+#### Foundations
+
+- Grid
+- ThemeProvider
+- ErrorBoundary
+- Language switcher ??
+
+#### Templates
+
+- BaseTemplate
+
+#### Pages
+
+- HomePage
+
 ### New React 19 hooks included :
 
 - useTransition to handle pending / loading state in interactive components
@@ -28,12 +68,6 @@ Light and modern Atomic UI Library;
 ### Performance
 
 - Lazy loading
-
-### Foundations
-
-- Grid
-- ThemeProvider
-- ErrorBoundary
-- Language switcher ??
+- Light icon set ??
 
 ### Server components ??
