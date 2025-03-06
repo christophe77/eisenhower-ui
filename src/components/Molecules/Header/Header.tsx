@@ -3,6 +3,7 @@ import { designTokens } from '../../../tokens/designTokens';
 import ThemeSwitcher from '../ThemeSwitcher/ThemeSwitcher';
 import useTheme from '../../Foundations/ThemeProvider/useTheme';
 import SidebarMenu from '../../Organism/SidebarMenu/SidebarMenu';
+import Tooltip from '../../Atoms/ToolTip/ToolTip';
 
 type HeaderProps = {
 	title: string;
@@ -24,7 +25,7 @@ const Header: FC<HeaderProps> = ({ title = '', items = [] }: HeaderProps) => {
 			}}
 		>
 			<SidebarMenu />
-			
+
 			<h1 className="text-xl font-bold pl-15">{`<${title}>`}</h1>
 
 			<ul className="inline whitespace-nowrap">
@@ -37,8 +38,9 @@ const Header: FC<HeaderProps> = ({ title = '', items = [] }: HeaderProps) => {
 					</li>
 				))}
 			</ul>
-
-			<ThemeSwitcher />
+			<Tooltip text={`Set dark mode ${isDarkMode ? 'OFF' : 'ON'}`}>
+				<ThemeSwitcher />
+			</Tooltip>
 		</header>
 	);
 };

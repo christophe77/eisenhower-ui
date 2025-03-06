@@ -1,19 +1,26 @@
+import { ReactNode } from "react";
+
+type Link = {
+	rel: string;
+	href: string;
+};
+type Meta = {
+	name: string;
+	content: string;
+};
 interface HeadDocumentProps {
 	title?: string;
-	metas?: { name: string; content: string }[];
-	links?: { rel: string; href: string }[];
+	metas?: Meta[];
+	links?: Link[];
+	children?: ReactNode;
 }
-const HeadDocument = ({
-	title = 'eisenhower-ui',
-	metas,
-	links,
-}: HeadDocumentProps) => {
+const HeadDocument = ({ title = '', metas, links, children }: HeadDocumentProps) => {
 	return (
 		<>
 			<title>{title}</title>
 			{links?.map((link, linkIndex) => (
 				<link
-					key={`${link.href}-${linkIndex}`}
+					key={`${link.rel}-${linkIndex}`}
 					rel={link.rel}
 					href={link.href}
 				/>
@@ -25,6 +32,7 @@ const HeadDocument = ({
 					content={meta.content}
 				/>
 			))}
+			{children}
 		</>
 	);
 };

@@ -1,0 +1,60 @@
+Atoms
+
+Étiquettes (labels)
+Icônes
+Tags / Pills
+Indicateurs de chargement (spinners, skeleton loaders)
+Champs de texte (input, textarea)
+Cases à cocher (checkbox)
+Boutons radio
+Sélecteurs (dropdown, select)
+Curseurs (sliders)
+Switch (toggle)
+Champs de date (date picker)
+Images
+Icônes (SVG, FontAwesome…)
+Vidéos
+Illustrations
+Alertes / Messages d'erreur
+Pastilles de notification
+Éléments de validation (check, croix)
+
+Molecules
+
+🔍 Champs de Recherche & Formulaires
+Barre de recherche (input + bouton + icône de loupe)
+Champ de saisie avec label et icône
+Groupe de boutons radio
+Groupe de cases à cocher
+Sélecteur avec label et icône (ex. : dropdown)
+Champ de mot de passe avec bouton "afficher/masquer"
+Formulaire de connexion (email + mot de passe + bouton)
+Formulaire de newsletter (input + bouton d’envoi)
+📌 Navigation & Menus
+Menu de navigation principal (liste de liens avec icônes)
+Barre de navigation (logo + liens + bouton CTA)
+Menu hamburger (icône + animation + liste de liens)
+Fil d’Ariane (breadcrumbs)
+Pagination (numéros de page + boutons précédent/suivant)
+Onglets (tabs) avec contenu associé
+📢 Notifications & Feedback
+Alerte avec icône et bouton de fermeture (success, error, warning…)
+Tooltip avec icône d’information
+Snackbars (notifications temporaires en bas de l’écran)
+Popover (petite fenêtre d’information sur survol ou clic)
+Badge de notification sur une icône (ex. : 🔔 avec un chiffre)
+🛠 Cartes & Blocs d’Information
+Carte d’article (image + titre + description + bouton)
+Carte produit (image + nom + prix + bouton "ajouter au panier")
+Carte utilisateur (avatar + nom + rôle + actions)
+Témoignage (photo + nom + citation)
+Bloc de statistiques (chiffre + icône + description)
+Accordeon (FAQ avec questions repliables)
+Liste d’éléments avec icônes (checklist, features…)
+🎛 Médias & Interactions
+Galerie d’images (grid avec vignettes)
+Carrousel / Slider d’images
+Lecteur vidéo (bouton play + barre de progression)
+Bloc audio (lecture/pause + barre de progression)
+Avatar avec statut en ligne/hors-ligne
+Boutons de partage social (Facebook, Twitter, LinkedIn…)
