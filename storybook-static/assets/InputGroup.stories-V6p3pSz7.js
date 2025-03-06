@@ -1,7 +1,0 @@
-const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["./Input-DgQIi-g_.js","./jsx-runtime-D_zvdyIk.js","./designTokens-BPi3JOB7.js","./Button-DbzJiF0n.js","./index-DmM0KDA7.js","./proxy-Bt5sj0N5.js"])))=>i.map(i=>d[i]);
-import{j as e}from"./jsx-runtime-D_zvdyIk.js";import{_ as s}from"./iframe-mAzYEbjL.js";import{r as a}from"./index-DmM0KDA7.js";const c=a.lazy(()=>s(()=>import("./Input-DgQIi-g_.js"),__vite__mapDeps([0,1,2]),import.meta.url)),d=a.lazy(()=>s(()=>import("./Button-DbzJiF0n.js"),__vite__mapDeps([3,1,4,5,2]),import.meta.url)),p=({placeholder:i,buttonText:u,onButtonClick:m})=>e.jsxs("div",{className:"flex gap-2",children:[e.jsx(c,{placeholder:i}),e.jsx(d,{onClick:m,children:u})]});p.__docgenInfo={description:"",methods:[],displayName:"InputGroup",props:{placeholder:{required:!1,tsType:{name:"string"},description:""},buttonText:{required:!0,tsType:{name:"string"},description:""},onButtonClick:{required:!1,tsType:{name:"signature",type:"function",raw:"() => void",signature:{arguments:[],return:{name:"void"}}},description:""}}};const f={title:"Components/Molecules/InputGroup",component:p},t={args:{placeholder:"Enter text...",buttonText:"Submit"}};var r,o,n;t.parameters={...t.parameters,docs:{...(r=t.parameters)==null?void 0:r.docs,source:{originalSource:`{
-  args: {
-    placeholder: "Enter text...",
-    buttonText: "Submit"
-  }
-}`,...(n=(o=t.parameters)==null?void 0:o.docs)==null?void 0:n.source}}};const g=["Default"];export{t as Default,g as __namedExportsOrder,f as default};

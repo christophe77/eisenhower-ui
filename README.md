@@ -19,7 +19,7 @@ Light and modern Atomic UI Library;
 
 ### Accessibility
 
-- RGAA conformity
+- RGAA conformity ?
 
 ### SEO
 
@@ -28,12 +28,12 @@ Light and modern Atomic UI Library;
 ### Performance
 
 - Lazy loading
-- Server components
 
 ### Foundations
 
 - Grid
 - ThemeProvider
-- Language switcher
+- ErrorBoundary
+- Language switcher ??
 
-### Server components
+### Server components ??

@@ -23,17 +23,21 @@ const Button: FC<ButtonProps> = ({
 	className,
 }) => {
 	const [isPending, startTransition] = useTransition();
+
 	const baseStyles = `rounded-lg font-medium transition-all cursor-pointer ${designTokens.transition} ${className}`;
+	
 	const variantStyles = {
 		primary: `bg-[${designTokens.colors.primary}] text-[${designTokens.colors.textPrimary}] hover:bg-blue-700`,
 		secondary: `bg-[${designTokens.colors.secondary}] text-[${designTokens.colors.textPrimary}] hover:bg-gray-700`,
 		outline: `border border-[${designTokens.colors.outline}] text-[${designTokens.colors.outline}] hover:bg-gray-100`,
 	};
+
 	const sizeStyles = {
 		sm: `px-3 py-1 text-sm`,
 		md: `px-4 py-2 text-base`,
 		lg: `px-5 py-3 text-lg`,
 	};
+
 	const wrappedOnClick = () => {
 		if (onClick) {
 			return startTransition(() => {

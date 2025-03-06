@@ -1,0 +1,5 @@
+import{j as r}from"./jsx-runtime-D_zvdyIk.js";import{B as m}from"./BaseTemplate-dQ7UCs-H.js";import{T as p}from"./ThemeProvider-BWxlGy2Y.js";import"./Header-DCDBLrBh.js";import"./designTokens-BPi3JOB7.js";import"./SidebarMenu-c9OhmL0R.js";import"./index-DmM0KDA7.js";import"./index-DcpVMaJ4.js";import"./iframe-CRvV47_J.js";import"./index-BSnW-2jp.js";import"./proxy-CEIfVRbT.js";const g={title:"Components/Templates/BaseTemplate",component:m},e=()=>r.jsx(p,{children:r.jsx(m,{title:"Page d'exemple",children:r.jsx("p",{children:"Contenu de la page"})})});e.__docgenInfo={description:"",methods:[],displayName:"Default"};var t,o,a;e.parameters={...e.parameters,docs:{...(t=e.parameters)==null?void 0:t.docs,source:{originalSource:`() => <ThemeProvider>\r
+    <BaseTemplate title="Page d'exemple">\r
+      <p>Contenu de la page</p>\r
+    </BaseTemplate>\r
+  </ThemeProvider>`,...(a=(o=e.parameters)==null?void 0:o.docs)==null?void 0:a.source}}};const B=["Default"];export{e as Default,B as __namedExportsOrder,g as default};
