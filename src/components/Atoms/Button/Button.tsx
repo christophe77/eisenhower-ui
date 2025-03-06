@@ -50,9 +50,7 @@ const Button: FC<ButtonProps> = ({
 
 	return (
 		<motion.button
-			className={clsx(baseStyles, variantStyles[variant], sizeStyles[size], {
-				'opacity-50 cursor-not-allowed': disabled || isPending,
-			})}
+			className={clsx(baseStyles, variantStyles[variant], sizeStyles[size], (disabled || isPending) && 'opacity-50')}
 			onClick={wrappedOnClick}
 			disabled={disabled || isPending}
 			type={type}
@@ -63,6 +61,7 @@ const Button: FC<ButtonProps> = ({
 				color: designTokens.colors.textPrimary,
 				borderRadius: designTokens.borderRadius.lg,
 				boxShadow: designTokens.boxShadow.md,
+				cursor : (disabled || isPending) ? 'not-allowed' : 'pointer'
 			}}
 		>
 			{isPending ? "Pending..." : children}
