@@ -27,7 +27,7 @@ class ErrorBoundary extends Component<Props, State> {
 			return (
 				<div className="block">
 					<h3 className="text-3xl">Something went wrong.</h3>
-					<p className="border p-4 mt-4">{this.state.message}</p>
+					<p className="border p-4 mt-4 break-words">{this.state.message}</p>
 				</div>
 			);
 		}
