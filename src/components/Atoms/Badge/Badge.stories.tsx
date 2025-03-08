@@ -1,10 +1,20 @@
 import { Meta, StoryObj } from '@storybook/react';
 import Badge from './Lazy';
+import { ThemeProvider } from '../../Foundations/ThemeProvider/ThemeProvider';
 
 const metaBadge: Meta<typeof Badge> = {
 	title: 'Components/Atoms/Badge',
 	component: Badge,
-	tags: ["autodocs"],
+	tags: ['autodocs'],
+	decorators: [
+		(Story) => (
+			<ThemeProvider>
+				<div className="p-5 text-center">
+					<Story />
+				</div>
+			</ThemeProvider>
+		),
+	],
 	argTypes: {
 		variant: {
 			control: 'select',

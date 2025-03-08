@@ -5,6 +5,13 @@ const metaInput: Meta<typeof Input> = {
 	title: 'Components/Atoms/Input',
 	component: Input,
 	tags: ['autodocs'],
+	decorators: [
+		(Story) => (
+			<div className="p-2 h-[120px] mb-5">
+				<Story />
+			</div>
+		),
+	],
 	argTypes: {
 		type: {
 			control: 'select',

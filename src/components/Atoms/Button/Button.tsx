@@ -1,7 +1,8 @@
 import { FC, ReactNode, useTransition } from 'react';
 import clsx from 'clsx';
 import { motion } from 'framer-motion';
-import { designTokens } from '../../../tokens/designTokens';
+import { designTokens } from '../../../theme/designTokens';
+import useTheme from '../../Foundations/ThemeProvider/useTheme';
 
 type ButtonProps = {
 	variant?: 'primary' | 'secondary' | 'outline';
@@ -22,16 +23,21 @@ const Button: FC<ButtonProps> = ({
 	disabled,
 	className,
 }) => {
+	const { isDarkMode } = useTheme();
 	const [isPending, startTransition] = useTransition();
 
 	const baseStyles = `rounded-lg font-medium transition-all cursor-pointer ${designTokens.transition} ${className}`;
-	
-	const variantStyles = {
+
+	const variantStylesLight = {
 		primary: `bg-[${designTokens.colors.primary}] text-[${designTokens.colors.textPrimary}] hover:bg-blue-700`,
 		secondary: `bg-[${designTokens.colors.secondary}] text-[${designTokens.colors.textPrimary}] hover:bg-gray-700`,
 		outline: `border border-[${designTokens.colors.outline}] text-[${designTokens.colors.outline}] hover:bg-gray-100`,
 	};
-
+	const variantStylesDark = {
+		primary: `bg-[${designTokens.darkMode.primary}] text-[${designTokens.darkMode.textPrimary}] hover:bg-blue-700`,
+		secondary: `bg-[${designTokens.darkMode.secondary}] text-[${designTokens.darkMode.textPrimary}] hover:bg-gray-700`,
+		outline: `border border-[${designTokens.darkMode.outline}] text-[${designTokens.darkMode.outline}] hover:bg-gray-100`,
+	};
 	const sizeStyles = {
 		sm: `px-3 py-1 text-sm`,
 		md: `px-4 py-2 text-base`,
@@ -43,14 +49,19 @@ const Button: FC<ButtonProps> = ({
 			return startTransition(() => {
 				onClick();
 			});
-		}else{
-			return console.log("click")
+		} else {
+			return console.log('boom');
 		}
 	};
 
 	return (
 		<motion.button
-			className={clsx(baseStyles, variantStyles[variant], sizeStyles[size], (disabled || isPending) && 'opacity-50')}
+			className={clsx(
+				baseStyles,
+				isDarkMode ? variantStylesDark[variant] : variantStylesLight[variant],
+				sizeStyles[size],
+				(disabled || isPending) && 'opacity-50',
+			)}
 			onClick={wrappedOnClick}
 			disabled={disabled || isPending}
 			type={type}
@@ -61,10 +72,10 @@ const Button: FC<ButtonProps> = ({
 				color: designTokens.colors.textPrimary,
 				borderRadius: designTokens.borderRadius.lg,
 				boxShadow: designTokens.boxShadow.md,
-				cursor : (disabled || isPending) ? 'not-allowed' : 'pointer'
+				cursor: disabled || isPending ? 'not-allowed' : 'pointer',
 			}}
 		>
-			{isPending ? "Pending..." : children}
+			{isPending ? 'Pending...' : children}
 		</motion.button>
 	);
 };

@@ -7,7 +7,7 @@ import {
 	cloneElement,
 } from 'react';
 import { useInView } from 'react-intersection-observer';
-import { designTokens } from '../../../tokens/designTokens';
+import { designTokens } from '../../../theme/designTokens';
 
 interface GridProps {
 	columns?: number;

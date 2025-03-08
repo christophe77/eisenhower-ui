@@ -1,6 +1,6 @@
 import { useState, FC } from 'react';
 import { motion } from 'framer-motion';
-import { designTokens } from '../../../tokens/designTokens';
+import { designTokens } from '../../../theme/designTokens';
 import Button from '../../Atoms/Button/Lazy';
 import IconButton from '../../Atoms/IconButton/Lazy';
 

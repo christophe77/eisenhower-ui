@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { designTokens } from '../../../tokens/designTokens';
+import { designTokens } from '../../../theme/designTokens';
 import ThemeSwitcher from '../ThemeSwitcher/ThemeSwitcher';
 import useTheme from '../../Foundations/ThemeProvider/useTheme';
 import SidebarMenu from '../../Organism/SidebarMenu/SidebarMenu';

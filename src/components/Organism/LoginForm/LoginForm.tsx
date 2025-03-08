@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { designTokens } from '../../../tokens/designTokens';
+import { designTokens } from '../../../theme/designTokens';
 import Input from '../../Atoms/Input/Lazy';
 import Button from '../../Atoms/Button/Lazy';
 

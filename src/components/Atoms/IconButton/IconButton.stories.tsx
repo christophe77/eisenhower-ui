@@ -5,6 +5,13 @@ const metaIconButton: Meta<typeof IconButton> = {
   title: "Components/Atoms/IconButton",
   component: IconButton,
   tags: ["autodocs"],
+  decorators: [
+		(Story) => (
+			<div className="p-5">
+				<Story />
+			</div>
+		),
+	],
   argTypes: {
     variant: {
       control: "select",

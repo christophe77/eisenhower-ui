@@ -20,6 +20,10 @@ export const designTokens = {
 		textSecondary: '#e2e8f0',
 		background: '#000000', // Full black pour une immersion totale
 		card: '#1a202c', // Bleu nuit pour les cartes
+		error: '#ff1744', // Rouge éclatant pour les erreurs
+		warning: '#ffa726', // Orange plus doux
+		success: '#00e676', // Vert néon pour un effet explosif 💥
+		info: '#1a202c', // Bleu nuit pour infos
 	},
 	spacing: {
 		sm: '0.75rem', // Un peu plus d'air

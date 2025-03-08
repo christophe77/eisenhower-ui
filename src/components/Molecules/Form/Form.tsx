@@ -1,5 +1,5 @@
 import { FC, ReactNode, useTransition } from 'react';
-import { designTokens } from '../../../tokens/designTokens';
+import { designTokens } from '../../../theme/designTokens';
 
 type FormProps = {
 	action?: (formData: FormData) => void | Promise<void>;

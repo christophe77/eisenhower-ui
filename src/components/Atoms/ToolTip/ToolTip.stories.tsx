@@ -5,6 +5,13 @@ const metaToolTip: Meta<typeof ToolTip> = {
 	title: 'Components/Atoms/ToolTip',
 	component: ToolTip,
 	tags: ['autodocs'],
+	decorators: [
+		(Story) => (
+			<div className="h-[90px] mb-5 mt-5 p-5 text-center">
+				<Story />
+			</div>
+		),
+	],
     argTypes: {
         text: {
           control: "text"

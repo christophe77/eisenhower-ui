@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { designTokens } from "../../../tokens/designTokens";
+import { designTokens } from "../../../theme/designTokens";
 
 interface CarouselProps {
   images: string[];

@@ -1,5 +1,5 @@
 import React from "react";
-import { designTokens } from "../../../tokens/designTokens";
+import { designTokens } from "../../../theme/designTokens";
 
 interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
   label?: string;

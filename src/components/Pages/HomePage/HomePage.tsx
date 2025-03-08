@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import BaseTemplate from '../../Templates/BaseTemplate/BaseTemplate';
-import { designTokens } from '../../../tokens/designTokens';
+import { designTokens } from '../../../theme/designTokens';
 import Grid from '../../Foundations/Grid/Grid';
 import Card from '../../Molecules/Card/Card';
 

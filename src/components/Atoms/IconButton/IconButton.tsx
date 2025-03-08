@@ -1,7 +1,7 @@
 import { FC, ReactNode } from 'react';
 import clsx from 'clsx';
 import { motion } from 'framer-motion';
-import { designTokens } from '../../../tokens/designTokens';
+import { designTokens } from '../../../theme/designTokens';
 
 type IconButtonProps = {
 	variant?: 'primary' | 'secondary' | 'outline';

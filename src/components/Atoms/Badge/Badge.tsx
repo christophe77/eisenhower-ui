@@ -1,5 +1,6 @@
 import { FC } from 'react';
-import { designTokens } from '../../../tokens/designTokens';
+import { designTokens } from '../../../theme/designTokens';
+import useTheme from '../../Foundations/ThemeProvider/useTheme';
 
 type BadgeProps = {
 	text: string;
@@ -7,10 +8,11 @@ type BadgeProps = {
 };
 
 const Badge: FC<BadgeProps> = ({ text, variant = 'success' }) => {
+	const {isDarkMode} = useTheme();
 	return (
 		<span
-			className="px-3 py-1 text-sm rounded-full text-white"
-			style={{ background: designTokens.colors[variant] }}
+			className="px-3 py-1 text-sm rounded-full"
+			style={{ background: isDarkMode ? designTokens.darkMode[variant] : designTokens.colors[variant] }}
 		>
 			{text}
 		</span>
