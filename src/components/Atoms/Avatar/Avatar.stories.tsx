@@ -13,6 +13,7 @@ const metaAvatar: Meta<typeof Avatar> = {
 		),
 	],
 	argTypes: {
+		alt: { control: 'text' },
 		size: {
 			control: 'select',
 			options: ['sm', 'md', 'lg'],
@@ -24,21 +25,24 @@ export default metaAvatar;
 
 export const Small: StoryObj<typeof Avatar> = {
 	args: {
-		src: 'https://placehold.co/40',
+		imgSrc: 'https://placehold.co/40',
 		size: 'sm',
+		alt: 'Small size avatar',
 	},
 };
 
 export const Medium: StoryObj<typeof Avatar> = {
 	args: {
-		src: 'https://placehold.co/60',
+		imgSrc: 'https://placehold.co/60',
 		size: 'md',
+		alt: 'Medium size avatar',
 	},
 };
 
 export const Large: StoryObj<typeof Avatar> = {
 	args: {
-		src: 'https://placehold.co/80',
+		imgSrc: 'https://placehold.co/80',
 		size: 'lg',
+		alt: 'Large size avatar',
 	},
 };

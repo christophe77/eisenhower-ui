@@ -2,6 +2,7 @@ import { Component, ErrorInfo, ReactNode } from 'react';
 
 interface Props {
 	children: ReactNode;
+	componentName: string;
 }
 
 interface State {
@@ -26,7 +27,7 @@ class ErrorBoundary extends Component<Props, State> {
 		if (this.state.hasError) {
 			return (
 				<div className="block">
-					<h3 className="text-3xl">Something went wrong.</h3>
+					<h2 className="text-2xl">Something went wrong in component {this.props.componentName}</h2> 
 					<p className="border p-4 mt-4 break-words">{this.state.message}</p>
 				</div>
 			);

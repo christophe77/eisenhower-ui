@@ -6,7 +6,7 @@ const metaErrorBoundary: Meta<typeof ErrorBoundary> = {
 	component: ErrorBoundary,
 	decorators: [
 		(Story) => (
-			<ErrorBoundary>
+			<ErrorBoundary componentName={"ErrorBoundary"}>
 				<Story />
 			</ErrorBoundary>
 		),

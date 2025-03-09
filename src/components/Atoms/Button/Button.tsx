@@ -29,14 +29,14 @@ const Button: FC<ButtonProps> = ({
 	const baseStyles = `rounded-lg font-medium transition-all cursor-pointer ${designTokens.transition} ${className}`;
 
 	const variantStylesLight = {
-		primary: `bg-[${designTokens.colors.primary}] text-[${designTokens.colors.textPrimary}] hover:bg-blue-700`,
-		secondary: `bg-[${designTokens.colors.secondary}] text-[${designTokens.colors.textPrimary}] hover:bg-gray-700`,
-		outline: `border border-[${designTokens.colors.outline}] text-[${designTokens.colors.outline}] hover:bg-gray-100`,
+		primary: `bg-[${designTokens.colors.primary}] text-[${designTokens.colors.textPrimary}] hover:bg-[${designTokens.colors.secondary}]`,
+		secondary: `bg-[${designTokens.colors.secondary}] text-[${designTokens.colors.textSecondary}] hover:bg-[${designTokens.colors.secondary}`,
+		outline: `border border-[${designTokens.colors.outline}] text-[${designTokens.colors.outline}] hover:bg-[${designTokens.colors.secondary}`,
 	};
 	const variantStylesDark = {
-		primary: `bg-[${designTokens.darkMode.primary}] text-[${designTokens.darkMode.textPrimary}] hover:bg-blue-700`,
-		secondary: `bg-[${designTokens.darkMode.secondary}] text-[${designTokens.darkMode.textPrimary}] hover:bg-gray-700`,
-		outline: `border border-[${designTokens.darkMode.outline}] text-[${designTokens.darkMode.outline}] hover:bg-gray-100`,
+		primary: `bg-[${designTokens.darkMode.primary}] text-[${designTokens.darkMode.textPrimary}] hover:bg-[${designTokens.darkMode.secondary}`,
+		secondary: `bg-[${designTokens.darkMode.secondary}] text-[${designTokens.darkMode.textPrimary}] hover:bg-[${designTokens.darkMode.secondary}`,
+		outline: `border border-[${designTokens.darkMode.outline}] text-[${designTokens.darkMode.outline}] hover:bg-[${designTokens.darkMode.secondary}`,
 	};
 	const sizeStyles = {
 		sm: `px-3 py-1 text-sm`,
