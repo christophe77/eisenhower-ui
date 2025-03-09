@@ -1,7 +1,6 @@
 {
 	"name": "eisenhower-ui",
-	"private": true,
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"type": "module",
 	"scripts": {
 		"dev": "vite",
@@ -14,6 +13,7 @@
 	"dependencies": {
 		"@tailwindcss/vite": "^4.0.9",
 		"clsx": "^2.1.1",
+		"eisenhower-ui": "^0.0.1",
 		"framer-motion": "^12.4.10",
 		"lucide-react": "^0.477.0",
 		"react": "^19.0.0",
