@@ -1,0 +1,2 @@
+const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["./ThemeProvider-BMDqP_bf.js","./jsx-runtime-D_zvdyIk.js","./index-DmM0KDA7.js","./designTokens-9Zu84yzh.js","./ThemeContext-Dz4fsFzT.js"])))=>i.map(i=>d[i]);
+import{_ as r}from"./iframe-B77-k6Rq.js";import{r as o}from"./index-DmM0KDA7.js";const m=o.lazy(()=>r(()=>import("./ThemeProvider-BMDqP_bf.js"),__vite__mapDeps([0,1,2,3,4]),import.meta.url));export{m as T};

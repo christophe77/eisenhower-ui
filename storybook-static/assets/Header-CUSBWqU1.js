@@ -1,0 +1,7 @@
+import{j as e}from"./jsx-runtime-D_zvdyIk.js";import{d as s}from"./designTokens-9Zu84yzh.js";import a from"./ThemeSwitcher-G-EjmcHY.js";import{u as o}from"./useTheme-DrQdFbE0.js";import l from"./SidebarMenu-BpcyM_yb.js";import m from"./ToolTip-DZgVQ8um.js";import"./index-Czwyws4E.js";import"./iframe-B77-k6Rq.js";import"./index-DmM0KDA7.js";import"./ThemeContext-Dz4fsFzT.js";import"./index-Dnx3TLCb.js";import"./proxy-CEIfVRbT.js";import"./clsx-B-dksMZM.js";const p=({title:t="",items:n=[]})=>{const{isDarkMode:i}=o();return e.jsxs("header",{className:"w-full p-4 shadow-md flex justify-between items-center",style:{backgroundColor:i?s.darkMode.primary:s.colors.primary},children:[e.jsx(l,{}),e.jsx("h1",{className:"text-xl font-bold pl-15",children:`<${t}>`}),e.jsx("ul",{className:"inline whitespace-nowrap",children:n.map(r=>e.jsx("li",{className:`w-fit inline-block mx-1 p-3 ${r.link&&"cursor-pointer"}`,children:r.name},`${r.name}-${r.link??"-"}`))}),e.jsx(m,{text:`Set dark mode ${i?"OFF":"ON"}`,children:e.jsx(a,{})})]})};p.__docgenInfo={description:"",methods:[],displayName:"Header",props:{title:{required:!1,tsType:{name:"string"},description:"",defaultValue:{value:"''",computed:!1}},items:{required:!1,tsType:{name:"Array",elements:[{name:"signature",type:"object",raw:`{\r
+	name: string;\r
+	link?: string;\r
+}`,signature:{properties:[{key:"name",value:{name:"string",required:!0}},{key:"link",value:{name:"string",required:!1}}]}}],raw:`{\r
+	name: string;\r
+	link?: string;\r
+}[]`},description:"",defaultValue:{value:"[]",computed:!1}}}};export{p as default};

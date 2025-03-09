@@ -87,3 +87,9 @@ export const designTokens = {
 		lg: '2px', // Espacement boosté pour un effet futuriste
 	},
 };
+export const typography = {
+	fontFamily: {
+		primary: `'Poppins', sans-serif`,
+		secondary: `'JetBrains Mono', monospace`,
+	},
+};

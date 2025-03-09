@@ -1,15 +1,15 @@
-import React from "react";
+import {InputHTMLAttributes, FC, ReactNode} from "react";
 import { designTokens } from "../../../theme/designTokens";
 
-interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
+interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   label?: string;
   error?: string;
   success?: boolean;
   fullWidth?: boolean;
-  icon?: React.ReactNode;
+  icon?: ReactNode;
 }
 
-const Input: React.FC<InputProps> = ({
+const Input: FC<InputProps> = ({
   type = "text",
   label,
   error,

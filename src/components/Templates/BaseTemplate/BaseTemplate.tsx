@@ -1,5 +1,5 @@
 import { FC, ReactNode } from 'react';
-import Header from '../../Molecules/Header/Header';
+import Header from '../../Molecules/Header/Lazy';
 import ThemeProvider from '../../Foundations/ThemeProvider/Lazy';
 import HeadDocument from '../../Foundations/HeadDocument/Lazy';
 import { designTokens } from '../../../theme/designTokens';
@@ -29,7 +29,7 @@ const BaseTemplate: FC<BaseTemplateProps> = ({ title, children }) => {
 			<HeadDocument title={title} metas={metas} links={links} />
 			<ThemeProvider>
 				<div
-					className={`flex min-h-screen bg-[${isDarkMode ? designTokens.darkMode.background : designTokens.colors.background}] flex m-0`}
+					className={`flex min-h-screen bg-[${isDarkMode ? designTokens.darkMode.background : designTokens.colors.background}]`}
 				>
 					<div className="flex flex-col flex-1">
 						<Header title={title} items={items} />
