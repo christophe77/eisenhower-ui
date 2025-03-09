@@ -5,6 +5,13 @@ const metaCard: Meta<typeof Card> = {
   title: "Components/Molecules/Card",
   component: Card,
   tags: ["autodocs"],
+  decorators: [
+		(Story) => (
+			<div className="flex text-center p-10">
+				<Story />
+			</div>
+		),
+	],
 };
 
 export default metaCard;

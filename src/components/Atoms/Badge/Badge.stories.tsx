@@ -9,7 +9,7 @@ const metaBadge: Meta<typeof Badge> = {
 	decorators: [
 		(Story) => (
 			<ThemeProvider>
-				<div className="p-5 text-center">
+				<div className="flex text-center p-10">
 					<Story />
 				</div>
 			</ThemeProvider>

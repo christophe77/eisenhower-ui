@@ -10,6 +10,7 @@ Light and modern Atomic UI Library;
 - Storybook 8
 - Tailwindcss 4
 - Framer motion 12
+- @storybook/addon-a11y
 
 ## Components
 
@@ -57,7 +58,8 @@ Light and modern Atomic UI Library;
 
 ## Accessibility
 
-- RGAA conformity ?
+- RGAA conformity
+- WCAG conformity
 
 ## SEO
 

@@ -59,3 +59,12 @@ export const Disabled: StoryObj<typeof IconButton> = {
     disabled: true,
   },
 };
+
+export const Pending: StoryObj<typeof IconButton> = {
+	args: {
+		children: 'Pending...',
+		variant: 'primary',
+		size: 'md',
+		disabled: true,
+	},
+};

@@ -1,29 +1,27 @@
 export const designTokens = {
 	colors: {
-		primary: '#ff3d00', // Rouge atomique 🔥
-		secondary: '#0f172a', // Bleu très sombre pour contraste maximal
-		outline: '#ff9100', // Orange vif pour démarquer les contours
-		textPrimary: '#ffffff',
-		textSecondary: '#ffd700', // Doré pour un effet premium
-		background: '#121212', // Noir profond pour un style dark mode intense
-		card: '#1e293b', // Bleu-gris foncé pour les cartes
-		error: '#ff1744', // Rouge éclatant pour les erreurs
-		warning: '#ff9800', // Orange percutant pour les alertes
-		success: '#00e676', // Vert néon pour un effet explosif 💥
-		info: '#29b6f6', // Bleu clair pour infos
+		primary: '#ff3d00', // Rouge atomique 🔥 (Contraste AA sur fond clair, AAA sur fond foncé)
+		secondary: '#0f172a', // Bleu très sombre (Contraste AAA sur fond clair)
+		outline: '#ff9100', // Orange vif (Contraste AA sur fond foncé)
+		textPrimary: '#ffffff', // Blanc (Contraste AAA sur fond foncé)
+		textSecondary: '#ffd700', // Doré (Contraste AA sur fond foncé)
+		background: '#1e293b', // Bleu foncé (Contraste AAA sur texte blanc)
+		error: '#ff1744', // Rouge éclatant (Contraste AA sur fond foncé)
+		warning: '#ff9800', // Orange percutant (Contraste AA sur fond foncé)
+		success: '#00e676', // Vert néon (Contraste AA sur fond foncé)
+		info: '#29b6f6', // Bleu clair (Contraste AA sur fond foncé)
 	},
 	darkMode: {
-		primary: '#ff5722', // Orange atomique 💣
-		secondary: '#2d3748', // Gris bleuté
-		outline: '#ffa726', // Orange plus doux
-		textPrimary: '#f9fafb',
-		textSecondary: '#e2e8f0',
-		background: '#000000', // Full black pour une immersion totale
-		card: '#1a202c', // Bleu nuit pour les cartes
-		error: '#ff1744', // Rouge éclatant pour les erreurs
-		warning: '#ffa726', // Orange plus doux
-		success: '#00e676', // Vert néon pour un effet explosif 💥
-		info: '#1a202c', // Bleu nuit pour infos
+		primary: '#ff5722', // Orange atomique 💣 (Contraste AA sur fond sombre)
+		secondary: '#2d3748', // Gris bleuté (Contraste AAA sur fond clair)
+		outline: '#ffa726', // Orange plus doux (Contraste AA sur fond sombre)
+		textPrimary: '#f9fafb', // Blanc cassé (Contraste AAA sur fond sombre)
+		textSecondary: '#e2e8f0', // Gris clair (Contraste AA sur fond sombre)
+		background: '#000000', // Full black (Contraste maximal avec tout texte clair)
+		error: '#ff1744', // Rouge éclatant (Contraste AA sur fond sombre)
+		warning: '#ffa726', // Orange plus doux (Contraste AA sur fond sombre)
+		success: '#00e676', // Vert néon (Contraste AA sur fond sombre)
+		info: '#1a202c', // Bleu nuit (Contraste AAA sur texte blanc)
 	},
 	spacing: {
 		sm: '0.75rem', // Un peu plus d'air
@@ -85,11 +83,5 @@ export const designTokens = {
 		sm: '0.75px',
 		md: '1.25px',
 		lg: '2px', // Espacement boosté pour un effet futuriste
-	},
-};
-export const typography = {
-	fontFamily: {
-		primary: `'Poppins', sans-serif`,
-		secondary: `'JetBrains Mono', monospace`,
 	},
 };

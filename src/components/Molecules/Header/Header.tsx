@@ -38,7 +38,7 @@ const Header: FC<HeaderProps> = ({ title = '', items = [] }: HeaderProps) => {
 					</li>
 				))}
 			</ul>
-			<Tooltip text={`Set dark mode ${isDarkMode ? 'OFF' : 'ON'}`}>
+			<Tooltip text={`Set dark mode ${isDarkMode ? 'OFF' : 'ON'}`} position='left'>
 				<ThemeSwitcher />
 			</Tooltip>
 		</header>

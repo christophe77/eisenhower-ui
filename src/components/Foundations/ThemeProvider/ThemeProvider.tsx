@@ -3,7 +3,7 @@ import { designTokens } from '../../../theme/designTokens';
 import { ThemeContext } from './ThemeContext';
 
 const ThemeProvider: FC<{ children: ReactNode }> = ({ children }) => {
-	const [isDarkMode, setIsDarkMode] = useState(false);
+	const [isDarkMode, setIsDarkMode] = useState(true);
 
 	const toggleTheme = () => setIsDarkMode((prev) => !prev);
 

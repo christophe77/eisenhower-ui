@@ -1,4 +1,4 @@
-import { FC, ReactNode } from 'react';
+import { FC, ReactNode, useTransition } from 'react';
 import clsx from 'clsx';
 import { motion } from 'framer-motion';
 import { designTokens } from '../../../theme/designTokens';
@@ -22,6 +22,7 @@ const IconButton: FC<IconButtonProps> = ({
     icon,
     className
 }) => {
+	const [isPending, startTransition] = useTransition();
 	const baseStyles = `rounded-md shadow-md font-medium transition-all ${designTokens.transition} ${className}`;
 	const variantStyles = {
 		primary: `bg-[${designTokens.colors.primary}] text-[${designTokens.colors.textPrimary}] hover:bg-blue-700`,
@@ -33,7 +34,15 @@ const IconButton: FC<IconButtonProps> = ({
 		md: `px-4 py-2 text-base`,
 		lg: `px-5 py-3 text-lg`,
 	};
-
+	const wrappedOnClick = () => {
+		if (onClick) {
+			return startTransition(() => {
+				onClick();
+			});
+		} else {
+			return console.log('boom');
+		}
+	};
 	return (
 		<motion.button
 			className={clsx(
@@ -43,7 +52,7 @@ const IconButton: FC<IconButtonProps> = ({
                     'opacity-50 cursor-not-allowed': disabled,
                 }
 			)}
-			onClick={onClick}
+			onClick={wrappedOnClick}
 			disabled={disabled}
 			whileHover={{ scale: 1.1 }}
 			whileTap={{ scale: 0.9 }}
@@ -54,7 +63,7 @@ const IconButton: FC<IconButtonProps> = ({
 				boxShadow: designTokens.boxShadow.md,
 			}}
 		>
-			{icon}{children}
+			{icon}{isPending ? 'Pending...' : children}
 		</motion.button>
 	);
 };
