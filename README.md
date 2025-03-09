@@ -36,13 +36,15 @@ Light and modern Atomic UI Library;
 - Dashboard
 - LoginForm
 - SidebarMenu
+- AskGptChat
+- LanguageSwitcher
 
 ### Foundations
 
 - Grid
 - ThemeProvider
+- LanguageProvider
 - ErrorBoundary
-- Language switcher ??
 
 ### Templates
 
@@ -54,7 +56,8 @@ Light and modern Atomic UI Library;
 
 ## New React 19 hooks included :
 
-- useTransition to handle pending / loading state in interactive components
+- useTransition
+- useOptimistic
 
 ## Accessibility
 
@@ -68,6 +71,3 @@ Light and modern Atomic UI Library;
 ## Performance
 
 - Lazy loading
-- Light icon set ??
-
-## Server components ??
