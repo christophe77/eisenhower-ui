@@ -1,0 +1,8 @@
+const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["./HeadDocument-DsZ6JpxS.js","./jsx-runtime-D_zvdyIk.js"])))=>i.map(i=>d[i]);
+import{j as s}from"./jsx-runtime-D_zvdyIk.js";import{_ as d}from"./iframe-C_xkGExJ.js";import{r as l}from"./index-DmM0KDA7.js";const c=l.lazy(()=>d(()=>import("./HeadDocument-DsZ6JpxS.js"),__vite__mapDeps([0,1]),import.meta.url)),f={title:"Components/Foundations/HeadDocument",component:c,argTypes:{title:{control:"text",defaultValue:"eisenhower-ui"},metas:[],links:[]},tags:["autodocs"]},t={},p=[{name:"description",content:"Eisenhower ui design system"}],u=[{rel:"stylesheet",href:"styles.css"},{rel:"canonical",href:"https://example.com/page"}],e=()=>s.jsx(c,{metas:p,links:u,children:s.jsxs("div",{className:"block",children:["Meta title : ",document.getElementsByTagName("title").item.name,"Meta description :"," ",document.getElementsByTagName("description").item.name]})});e.__docgenInfo={description:"",methods:[],displayName:"WithMetas"};var a,o,r;t.parameters={...t.parameters,docs:{...(a=t.parameters)==null?void 0:a.docs,source:{originalSource:"{}",...(r=(o=t.parameters)==null?void 0:o.docs)==null?void 0:r.source}}};var m,n,i;e.parameters={...e.parameters,docs:{...(m=e.parameters)==null?void 0:m.docs,source:{originalSource:`() => <HeadDocument metas={metas} links={links}>\r
+        <div className="block">\r
+            Meta title : {document.getElementsByTagName('title').item.name}\r
+            Meta description :{' '}\r
+            {document.getElementsByTagName('description').item.name}\r
+        </div>\r
+    </HeadDocument>`,...(i=(n=e.parameters)==null?void 0:n.docs)==null?void 0:i.source}}};const y=["Default","WithMetas"];export{t as Default,e as WithMetas,y as __namedExportsOrder,f as default};

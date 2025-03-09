@@ -1,4 +1,4 @@
-import SidebarMenu from "./SidebarMenu";
+import SidebarMenu from "./Lazy";
 
 export default {
   title: "Components/Organisms/SidebarMenu",

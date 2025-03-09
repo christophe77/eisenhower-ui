@@ -1,0 +1,2 @@
+const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["./IconButton-M1Es1Pu4.js","./jsx-runtime-D_zvdyIk.js","./clsx-B-dksMZM.js","./designTokens-9Zu84yzh.js","./proxy-CEIfVRbT.js","./index-DmM0KDA7.js"])))=>i.map(i=>d[i]);
+import{_ as o}from"./iframe-C_xkGExJ.js";import{r}from"./index-DmM0KDA7.js";const a=r.lazy(()=>o(()=>import("./IconButton-M1Es1Pu4.js"),__vite__mapDeps([0,1,2,3,4,5]),import.meta.url));export{a as I};

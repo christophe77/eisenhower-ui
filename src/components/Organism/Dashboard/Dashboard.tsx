@@ -2,7 +2,7 @@ import { FC } from 'react';
 import LoginForm from '../LoginForm/LoginForm';
 import Header from '../../Molecules/Header/Header';
 import { designTokens } from '../../../theme/designTokens';
-import { ThemeProvider } from '../../Foundations/ThemeProvider/ThemeProvider';
+import ThemeProvider from '../../Foundations/ThemeProvider/Lazy';
 
 const Dashboard: FC = () => {
 	return (

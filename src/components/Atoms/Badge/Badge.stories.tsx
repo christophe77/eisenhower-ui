@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react';
 import Badge from './Lazy';
-import { ThemeProvider } from '../../Foundations/ThemeProvider/ThemeProvider';
+import ThemeProvider from '../../Foundations/ThemeProvider/Lazy';
 
 const metaBadge: Meta<typeof Badge> = {
 	title: 'Components/Atoms/Badge',

@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react';
-import Header from './Header';
-import { ThemeProvider } from '../../Foundations/ThemeProvider/ThemeProvider';
+import Header from './Lazy';
+import ThemeProvider from '../../Foundations/ThemeProvider/Lazy';
 
 const metaHeader: Meta<typeof Header> = {
 	title: 'Components/Molecules/Header',

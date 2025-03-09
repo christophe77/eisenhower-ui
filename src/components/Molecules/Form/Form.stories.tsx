@@ -1,7 +1,7 @@
 import { Meta, StoryObj } from '@storybook/react';
 import Form from './Form';
-import Button from '../../Atoms/Button/Button';
-import Input from '../../Atoms/Input/Input';
+import Button from '../../Atoms/Button/Lazy';
+import Input from '../../Atoms/Input/Lazy';
 
 function timeout(ms: number) {
 	return new Promise((resolve) => setTimeout(resolve, ms));

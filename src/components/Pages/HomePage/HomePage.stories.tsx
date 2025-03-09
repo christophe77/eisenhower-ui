@@ -1,5 +1,5 @@
 import HomePage from "./HomePage";
-import { ThemeProvider } from "../../Foundations/ThemeProvider/ThemeProvider";
+import ThemeProvider from "../../Foundations/ThemeProvider/Lazy";
 
 export default {
   title: "Components/Pages/HomePage",

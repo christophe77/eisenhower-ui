@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react';
-import ErrorBoundary from './ErrorBoundary';
+import ErrorBoundary from './Lazy';
 
 const metaErrorBoundary: Meta<typeof ErrorBoundary> = {
 	title: 'Components/Foundations/ErrorBoundary',

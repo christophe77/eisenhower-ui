@@ -1,5 +1,0 @@
-import{j as r}from"./jsx-runtime-D_zvdyIk.js";import{B as m}from"./BaseTemplate-94hKEsaP.js";import{T as p}from"./ThemeProvider-keJ5jzBb.js";import"./Header-C97mFDej.js";import"./designTokens-BPi3JOB7.js";import"./SidebarMenu-QUTdfJcm.js";import"./index-DmM0KDA7.js";import"./index-CgcJu3tQ.js";import"./iframe-C8JkcP0d.js";import"./index-BB8aueXX.js";import"./proxy-CEIfVRbT.js";import"./HeadDocument-DFHEMN3X.js";const B={title:"Components/Templates/BaseTemplate",component:m},e=()=>r.jsx(p,{children:r.jsx(m,{title:"Page d'exemple",children:r.jsx("p",{children:"Contenu de la page"})})});e.__docgenInfo={description:"",methods:[],displayName:"Default"};var t,o,a;e.parameters={...e.parameters,docs:{...(t=e.parameters)==null?void 0:t.docs,source:{originalSource:`() => <ThemeProvider>\r
-    <BaseTemplate title="Page d'exemple">\r
-      <p>Contenu de la page</p>\r
-    </BaseTemplate>\r
-  </ThemeProvider>`,...(a=(o=e.parameters)==null?void 0:o.docs)==null?void 0:a.source}}};const j=["Default"];export{e as Default,j as __namedExportsOrder,B as default};

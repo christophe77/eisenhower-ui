@@ -1,14 +1,16 @@
-import { useState, FC, ReactNode } from 'react';
+import { useState, FC, ReactNode, useMemo } from 'react';
 import { designTokens } from '../../../theme/designTokens';
 import { ThemeContext } from './ThemeContext';
 
-export const ThemeProvider: FC<{ children: ReactNode }> = ({ children }) => {
+const ThemeProvider: FC<{ children: ReactNode }> = ({ children }) => {
 	const [isDarkMode, setIsDarkMode] = useState(false);
 
 	const toggleTheme = () => setIsDarkMode((prev) => !prev);
 
+	const value = useMemo(() => ({ isDarkMode, toggleTheme }), [isDarkMode]);
+
 	return (
-		<ThemeContext.Provider value={{ isDarkMode, toggleTheme }}>
+		<ThemeContext.Provider value={value}>
 			<div
 				style={{
 					backgroundColor: isDarkMode
@@ -25,4 +27,4 @@ export const ThemeProvider: FC<{ children: ReactNode }> = ({ children }) => {
 		</ThemeContext.Provider>
 	);
 };
-
+export default ThemeProvider

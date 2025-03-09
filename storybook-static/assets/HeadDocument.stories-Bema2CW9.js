@@ -1,7 +1,0 @@
-import{j as s}from"./jsx-runtime-D_zvdyIk.js";import{H as c}from"./HeadDocument-DFHEMN3X.js";const g={title:"Components/Foundations/HeadDocument",component:c,argTypes:{title:{control:"text",defaultValue:"eisenhower-ui"},metas:[],links:[]},tags:["autodocs"]},t={},d=[{name:"description",content:"Eisenhower ui design system"}],l=[{rel:"stylesheet",href:"styles.css"},{rel:"canonical",href:"https://example.com/page"}],e=()=>s.jsx(c,{metas:d,links:l,children:s.jsxs("div",{className:"block",children:["Meta title : ",document.getElementsByTagName("title").item.name,"Meta description :"," ",document.getElementsByTagName("description").item.name]})});e.__docgenInfo={description:"",methods:[],displayName:"WithMetas"};var a,o,n;t.parameters={...t.parameters,docs:{...(a=t.parameters)==null?void 0:a.docs,source:{originalSource:"{}",...(n=(o=t.parameters)==null?void 0:o.docs)==null?void 0:n.source}}};var r,m,i;e.parameters={...e.parameters,docs:{...(r=e.parameters)==null?void 0:r.docs,source:{originalSource:`() => <HeadDocument metas={metas} links={links}>\r
-        <div className="block">\r
-            Meta title : {document.getElementsByTagName('title').item.name}\r
-            Meta description :{' '}\r
-            {document.getElementsByTagName('description').item.name}\r
-        </div>\r
-    </HeadDocument>`,...(i=(m=e.parameters)==null?void 0:m.docs)==null?void 0:i.source}}};const h=["Default","WithMetas"];export{t as Default,e as WithMetas,h as __namedExportsOrder,g as default};

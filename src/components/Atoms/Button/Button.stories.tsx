@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react';
 import Button from './Lazy';
-import { ThemeProvider } from '../../Foundations/ThemeProvider/ThemeProvider';
+import ThemeProvider from '../../Foundations/ThemeProvider/Lazy';
 
 const metaButton: Meta<typeof Button> = {
 	title: 'Components/Atoms/Button',

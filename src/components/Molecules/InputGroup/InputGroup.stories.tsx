@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from "@storybook/react";
-import InputGroup from "./InputGroup";
+import InputGroup from "./Lazy";
 
 const metaInputGroup: Meta<typeof InputGroup> = {
   title: "Components/Molecules/InputGroup",

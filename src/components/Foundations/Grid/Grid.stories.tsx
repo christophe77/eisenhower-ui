@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import Grid from './Grid';
+import Grid from './Lazy';
 import Button from '../../Atoms/Button/Button';
 
 export default {

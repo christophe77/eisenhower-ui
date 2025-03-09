@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react';
-import ThemeSwitcher from './ThemeSwitcher';
-import { ThemeProvider } from '../../Foundations/ThemeProvider/ThemeProvider';
+import ThemeSwitcher from './Lazy';
+import ThemeProvider from '../../Foundations/ThemeProvider/Lazy';
 
 const metaThemeSwitcher: Meta<typeof ThemeSwitcher> = {
 	title: 'Components/Molecules/ThemeSwitcher',

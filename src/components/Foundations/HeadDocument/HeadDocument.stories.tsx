@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react';
-import HeadDocument from './HeadDocument';
+import HeadDocument from './Lazy';
 
 const metaHeadDocument: Meta<typeof HeadDocument> = {
 	title: 'Components/Foundations/HeadDocument',

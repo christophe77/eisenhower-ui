@@ -1,8 +1,8 @@
 import { FC } from 'react';
-import BaseTemplate from '../../Templates/BaseTemplate/BaseTemplate';
+import BaseTemplate from '../../Templates/BaseTemplate/Lazy';
 import { designTokens } from '../../../theme/designTokens';
-import Grid from '../../Foundations/Grid/Grid';
-import Card from '../../Molecules/Card/Card';
+import Grid from '../../Foundations/Grid/Lazy';
+import Card from '../../Molecules/Card/Lazy';
 
 const HomePage: FC = () => {
 	return (

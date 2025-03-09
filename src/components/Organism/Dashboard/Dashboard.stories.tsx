@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from "@storybook/react";
-import Dashboard from "./Dashboard";
+import Dashboard from "./Lazy";
 
 const metaDashboard: Meta<typeof Dashboard> = {
   title: "Components/Organisms/Dashboard",
