@@ -1,5 +1,8 @@
 import { lazy } from 'react';
+import type { HeadDocumentProps } from '../HeadDocument';
 
-const HeadDocument = lazy(() => import('../HeadDocument'));
+export const LazyHeadDocument = lazy(() =>
+	import('../HeadDocument').then((module) => ({ default: module.HeadDocument })),
+);
 
-export default HeadDocument
+export type { HeadDocumentProps };

@@ -1,0 +1,1 @@
+{"version":3,"file":"BaseTemplate.d.ts","sourceRoot":"","sources":["../../../../src/components/Templates/BaseTemplate/BaseTemplate.tsx"],"names":[],"mappings":"AAAA,OAAO,EAAE,EAAE,EAAE,SAAS,EAAE,MAAM,OAAO,CAAC;AAOtC,MAAM,WAAW,iBAAiB;IACjC,KAAK,EAAE,MAAM,CAAC;IACd,QAAQ,EAAE,SAAS,CAAC;CACpB;AAED,eAAO,MAAM,YAAY,EAAE,EAAE,CAAC,iBAAiB,CA6B9C,CAAC"}

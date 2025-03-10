@@ -1,5 +1,8 @@
 import { lazy } from 'react';
+import type { LanguageProviderProps } from '../LanguageProvider';
 
-const LanguageProvider = lazy(() => import('../LanguageProvider'));
+export const LazyLanguageProvider = lazy(() =>
+	import('../LanguageProvider').then((module) => ({ default: module.LanguageProvider })),
+);
 
-export default LanguageProvider
+export type { LanguageProviderProps };

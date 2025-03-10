@@ -1,1 +1,0 @@
-import{r as t}from"./index-DmM0KDA7.js";import{T as r}from"./ThemeContext-Dz4fsFzT.js";function m(){const e=t.useContext(r);if(!e)throw new Error("useTheme must be used within a ThemeProvider");return e}export{m as u};

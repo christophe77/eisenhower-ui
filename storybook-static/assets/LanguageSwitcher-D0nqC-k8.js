@@ -1,0 +1,4 @@
+import{j as t}from"./jsx-runtime-D_zvdyIk.js";import{r as s}from"./index-BZISi7jw.js";import{L as i}from"./LanguageContext-CFrSQY5H.js";import"./_commonjsHelpers-CqkleIqs.js";function u(){const r=s.useContext(i);if(!r)throw new Error("useTheme must be used within a ThemeProvider");return r}const g=({languageList:r})=>{const{language:n,setLanguage:a}=u();return t.jsx("select",{value:n,onChange:e=>a(e.target.value),children:r.map((e,o)=>t.jsx("option",{value:e.code,children:e.name},`${e.code}-${o}`))})};g.__docgenInfo={description:"",methods:[],displayName:"LanguageSwitcher",props:{languageList:{required:!0,tsType:{name:"Array",elements:[{name:"signature",type:"object",raw:`{\r
+	code: string;\r
+	name: string;\r
+}`,signature:{properties:[{key:"code",value:{name:"string",required:!0}},{key:"name",value:{name:"string",required:!0}}]}}],raw:"LangDef[]"},description:""}}};export{g as LanguageSwitcher};

@@ -1,12 +1,12 @@
-import { Meta, StoryObj } from "@storybook/react";
-import Dashboard from "./Lazy";
+import { Meta, StoryObj } from '@storybook/react';
+import { LazyDashboard } from './Lazy';
 
-const metaDashboard: Meta<typeof Dashboard> = {
-  title: "Components/Organisms/Dashboard",
-  component: Dashboard,
-  tags: ["autodocs"],
+const metaDashboard: Meta<typeof LazyDashboard> = {
+	title: 'Components/Organisms/Dashboard',
+	component: LazyDashboard,
+	tags: ['autodocs'],
 };
 
 export default metaDashboard;
 
-export const Default: StoryObj<typeof Dashboard> = {};
+export const Default: StoryObj<typeof LazyDashboard> = {};

@@ -1,17 +1,17 @@
-import { useState, ReactNode } from 'react';
+import { useState, ReactNode, FC } from 'react';
 import clsx from 'clsx';
 
-interface TooltipProps {
+export type ToolTipProps = {
 	children: ReactNode;
 	text: string;
 	position?: 'top' | 'bottom' | 'left' | 'right';
-}
+};
 
-export default function Tooltip({
+export const Tooltip: FC<ToolTipProps> = ({
 	children,
 	text,
 	position = 'top',
-}: Readonly<TooltipProps>) {
+}) => {
 	const [visible, setVisible] = useState(false);
 
 	return (
@@ -38,4 +38,4 @@ export default function Tooltip({
 			</div>
 		</div>
 	);
-}
+};

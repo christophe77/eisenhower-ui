@@ -1,16 +1,16 @@
 import { FC, ReactNode } from 'react';
-import Header from '../../Molecules/Header/Lazy';
-import ThemeProvider from '../../Foundations/ThemeProvider/Lazy';
-import HeadDocument from '../../Foundations/HeadDocument/Lazy';
+import { LazyHeader } from '../../Molecules/Header/Lazy';
+import { LazyThemeProvider } from '../../Foundations/ThemeProvider/Lazy';
+import { LazyHeadDocument } from '../../Foundations/HeadDocument/Lazy';
 import { designTokens } from '../../../theme/designTokens';
 import useTheme from '../../Foundations/ThemeProvider/useTheme';
 
-interface BaseTemplateProps {
+export interface BaseTemplateProps {
 	title: string;
 	children: ReactNode;
 }
 
-const BaseTemplate: FC<BaseTemplateProps> = ({ title, children }) => {
+export const BaseTemplate: FC<BaseTemplateProps> = ({ title, children }) => {
 	const { isDarkMode } = useTheme();
 
 	const items = [
@@ -26,18 +26,17 @@ const BaseTemplate: FC<BaseTemplateProps> = ({ title, children }) => {
 	];
 	return (
 		<>
-			<HeadDocument title={title} metas={metas} links={links} />
-			<ThemeProvider>
+			<LazyHeadDocument title={title} metas={metas} links={links} />
+			<LazyThemeProvider>
 				<div
 					className={`flex min-h-screen bg-[${isDarkMode ? designTokens.darkMode.background : designTokens.colors.background}]`}
 				>
 					<div className="flex flex-col flex-1">
-						<Header title={title} items={items} />
+						<LazyHeader title={title} items={items} />
 						<main className="flex-1 p-6">{children}</main>
 					</div>
 				</div>
-			</ThemeProvider>
+			</LazyThemeProvider>
 		</>
 	);
 };
-export default BaseTemplate;

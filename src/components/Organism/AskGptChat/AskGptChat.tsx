@@ -1,9 +1,15 @@
+import { FC } from 'react';
 import useAskGptChat from './useAskGptChat';
-interface AskGptChatProps  {
-    REACT_APP_OPENAI_API_KEY : string
+
+export interface AskGptChatProps {
+	REACT_APP_OPENAI_API_KEY: string;
 }
-const AskGptChat = ({REACT_APP_OPENAI_API_KEY}:AskGptChatProps) => {
-	const { handleAsk, setQuestion, question, messages, isLoading } = useAskGptChat(REACT_APP_OPENAI_API_KEY);
+
+export const AskGptChat: FC<AskGptChatProps> = ({
+	REACT_APP_OPENAI_API_KEY,
+}) => {
+	const { handleAsk, setQuestion, question, messages, isLoading } =
+		useAskGptChat(REACT_APP_OPENAI_API_KEY);
 
 	return (
 		<div className="p-4 border rounded-lg shadow-lg bg-gray-900 text-white w-full max-w-lg">
@@ -12,7 +18,7 @@ const AskGptChat = ({REACT_APP_OPENAI_API_KEY}:AskGptChatProps) => {
 			<div className="my-4 p-2 h-64 overflow-y-auto border rounded bg-gray-800">
 				{messages.map((msg, index) => (
 					<p
-						key={index}
+						key={`${msg.role}-${index}`}
 						className={`p-2 my-1 rounded ${
 							msg.role === 'user'
 								? 'bg-blue-600 text-white'
@@ -48,5 +54,3 @@ const AskGptChat = ({REACT_APP_OPENAI_API_KEY}:AskGptChatProps) => {
 		</div>
 	);
 };
-
-export default AskGptChat;

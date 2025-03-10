@@ -1,5 +1,8 @@
 import { lazy } from 'react';
+import type { GridProps } from '../Grid';
 
-const Grid = lazy(() => import('../Grid'));
+export const LazyGrid = lazy(() =>
+	import('../Grid').then((module) => ({ default: module.Grid })),
+);
 
-export default Grid
+export type { GridProps };

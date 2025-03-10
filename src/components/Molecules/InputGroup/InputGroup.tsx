@@ -1,22 +1,22 @@
 import { FC } from 'react';
-import Input from '../../Atoms/Input/Lazy';
-import Button from '../../Atoms/Button/Lazy';
+import { LazyInput } from '../../Atoms/Input/Lazy';
+import { LazyButton } from '../../Atoms/Button/Lazy';
 
-type InputGroupProps = {
+export type InputGroupProps = {
 	placeholder?: string;
 	buttonText: string;
 	onButtonClick?: () => void;
 };
 
-const InputGroup: FC<InputGroupProps> = ({
+export const InputGroup: FC<InputGroupProps> = ({
 	placeholder,
 	buttonText,
 	onButtonClick,
 }) => {
 	return (
 		<div className="flex gap-2">
-			<Input placeholder={placeholder} />
-			<Button onClick={onButtonClick}>{buttonText}</Button>
+			<LazyInput placeholder={placeholder} />
+			<LazyButton onClick={onButtonClick}>{buttonText}</LazyButton>
 		</div>
 	);
 };

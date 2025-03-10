@@ -1,18 +1,18 @@
 import { Meta, StoryObj } from '@storybook/react';
-import Badge from './Lazy';
-import ThemeProvider from '../../Foundations/ThemeProvider/Lazy';
+import { LazyBadge, BadgeProps } from './Lazy';
+import {LazyThemeProvider} from '../../Foundations/ThemeProvider/Lazy';
 
-const metaBadge: Meta<typeof Badge> = {
+const metaBadge: Meta<BadgeProps> = {
 	title: 'Components/Atoms/Badge',
-	component: Badge,
+	component: LazyBadge,
 	tags: ['autodocs'],
 	decorators: [
 		(Story) => (
-			<ThemeProvider>
+			<LazyThemeProvider>
 				<div className="flex text-center p-10">
 					<Story />
 				</div>
-			</ThemeProvider>
+			</LazyThemeProvider>
 		),
 	],
 	argTypes: {
@@ -25,21 +25,21 @@ const metaBadge: Meta<typeof Badge> = {
 
 export default metaBadge;
 
-export const Success: StoryObj<typeof Badge> = {
+export const Success: StoryObj<BadgeProps> = {
 	args: {
 		text: 'Success',
 		variant: 'success',
 	},
 };
 
-export const Warning: StoryObj<typeof Badge> = {
+export const Warning: StoryObj<BadgeProps> = {
 	args: {
 		text: 'Warning',
 		variant: 'warning',
 	},
 };
 
-export const Error: StoryObj<typeof Badge> = {
+export const Error: StoryObj<BadgeProps> = {
 	args: {
 		text: 'Error',
 		variant: 'error',

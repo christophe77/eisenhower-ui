@@ -1,5 +1,5 @@
 import HomePage from "./HomePage";
-import ThemeProvider from "../../Foundations/ThemeProvider/Lazy";
+import {LazyThemeProvider} from "../../Foundations/ThemeProvider/Lazy";
 
 export default {
   title: "Components/Pages/HomePage",
@@ -7,7 +7,7 @@ export default {
 };
 
 export const Default = () => (
-  <ThemeProvider>
+  <LazyThemeProvider>
     <HomePage />
-  </ThemeProvider>
+  </LazyThemeProvider>
 );

@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { designTokens } from '../../../theme/designTokens';
 import useTheme from '../../Foundations/ThemeProvider/useTheme';
 
-type ButtonProps = {
+export type ButtonProps = {
 	variant?: 'primary' | 'secondary' | 'outline';
 	size?: 'sm' | 'md' | 'lg';
 	type?: 'button' | 'submit' | 'reset';
@@ -14,7 +14,7 @@ type ButtonProps = {
 	className?: string;
 };
 
-const Button: FC<ButtonProps> = ({
+export const Button: FC<ButtonProps> = ({
 	variant = 'primary',
 	size = 'md',
 	type,
@@ -79,5 +79,3 @@ const Button: FC<ButtonProps> = ({
 		</motion.button>
 	);
 };
-
-export default Button;

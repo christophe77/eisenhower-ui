@@ -1,5 +1,8 @@
 import { lazy } from 'react';
+import type { ErrorBoundaryProps } from '../ErrorBoundary';
 
-const ErrorBoundary = lazy(() => import('../ErrorBoundary'));
+export const LazyErrorBoundary = lazy(() =>
+	import('../ErrorBoundary').then((module) => ({ default: module.ErrorBoundary })),
+);
 
-export default ErrorBoundary
+export type { ErrorBoundaryProps };

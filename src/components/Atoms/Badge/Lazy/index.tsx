@@ -1,5 +1,8 @@
 import { lazy } from 'react';
+import type { BadgeProps } from '../Badge';
 
-const Badge = lazy(() => import('../Badge'));
+export const LazyBadge = lazy(() =>
+	import('../Badge').then((module) => ({ default: module.Badge })),
+);
 
-export default Badge
+export type { BadgeProps };

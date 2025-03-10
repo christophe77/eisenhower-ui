@@ -1,5 +1,8 @@
 import { lazy } from 'react';
+import type { InputProps } from '../Input';
 
-const Input = lazy(() => import('../Input'));
+export const LazyInput = lazy(() =>
+	import('../Input').then((module) => ({ default: module.Input })),
+);
 
-export default Input
+export type { InputProps };

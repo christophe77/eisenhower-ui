@@ -1,5 +1,5 @@
 import { lazy } from 'react';
 
-const Dashboard = lazy(() => import('../Dashboard'));
-
-export default Dashboard
+export const LazyDashboard = lazy(() =>
+	import('../Dashboard').then((module) => ({ default: module.Dashboard })),
+);

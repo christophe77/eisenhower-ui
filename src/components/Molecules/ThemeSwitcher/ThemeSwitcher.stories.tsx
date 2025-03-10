@@ -1,17 +1,17 @@
 import { Meta, StoryObj } from '@storybook/react';
-import ThemeSwitcher from './Lazy';
-import ThemeProvider from '../../Foundations/ThemeProvider/Lazy';
+import { LazyThemeSwitcher } from './Lazy';
+import { LazyThemeProvider } from '../../Foundations/ThemeProvider/Lazy';
 
-const metaThemeSwitcher: Meta<typeof ThemeSwitcher> = {
+const metaThemeSwitcher: Meta<typeof LazyThemeSwitcher> = {
 	title: 'Components/Molecules/ThemeSwitcher',
-	component: ThemeSwitcher,
+	component: LazyThemeSwitcher,
 	decorators: [
 		(Story) => (
-			<ThemeProvider>
+			<LazyThemeProvider>
 				<div className="p-5">
 					<Story />
 				</div>
-			</ThemeProvider>
+			</LazyThemeProvider>
 		),
 	],
 	tags: ['autodocs'],
@@ -19,4 +19,4 @@ const metaThemeSwitcher: Meta<typeof ThemeSwitcher> = {
 
 export default metaThemeSwitcher;
 
-export const Default: StoryObj<typeof ThemeSwitcher> = {};
+export const Default: StoryObj<typeof LazyThemeSwitcher> = {};

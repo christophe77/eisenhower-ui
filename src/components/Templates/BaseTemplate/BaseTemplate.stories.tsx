@@ -1,13 +1,15 @@
-import BaseTemplate from './BaseTemplate';
-import ThemeProvider from '../../Foundations/ThemeProvider/Lazy';
+import { LazyBaseTemplate } from './Lazy';
+import { LazyThemeProvider } from '../../Foundations/ThemeProvider/Lazy';
 
 export default {
 	title: 'Components/Templates/BaseTemplate',
-	component: BaseTemplate,
+	component: LazyBaseTemplate,
 };
 
 export const Default = () => (
-	<ThemeProvider>
-		<BaseTemplate title="Page d'exemple"><p>BaseTemplate</p></BaseTemplate>
-	</ThemeProvider>
+	<LazyThemeProvider>
+		<LazyBaseTemplate title="Page d'exemple">
+			<p>BaseTemplate</p>
+		</LazyBaseTemplate>
+	</LazyThemeProvider>
 );

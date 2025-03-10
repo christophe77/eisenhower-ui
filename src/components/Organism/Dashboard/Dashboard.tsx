@@ -1,16 +1,16 @@
 import { FC } from 'react';
-import LoginForm from '../LoginForm/LoginForm';
-import Header from '../../Molecules/Header/Header';
+import { LoginForm } from '../LoginForm/LoginForm';
+import { LazyHeader } from '../../Molecules/Header/Lazy';
 import { designTokens } from '../../../theme/designTokens';
-import ThemeProvider from '../../Foundations/ThemeProvider/Lazy';
+import { LazyThemeProvider } from '../../Foundations/ThemeProvider/Lazy';
 
-const Dashboard: FC = () => {
+export const Dashboard: FC = () => {
 	return (
-		<ThemeProvider>
+		<LazyThemeProvider>
 			<div
 				className={`min-h-screen bg-[${designTokens.colors.background}] flex flex-col items-center`}
 			>
-				<Header
+				<LazyHeader
 					title={'Dashboard'}
 					items={[
 						{ name: 'Item with link', link: 'https://google.fr/' },
@@ -21,8 +21,6 @@ const Dashboard: FC = () => {
 					<LoginForm />
 				</div>
 			</div>
-		</ThemeProvider>
+		</LazyThemeProvider>
 	);
 };
-
-export default Dashboard;

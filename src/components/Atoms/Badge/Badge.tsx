@@ -2,12 +2,12 @@ import { FC } from 'react';
 import { designTokens } from '../../../theme/designTokens';
 import useTheme from '../../Foundations/ThemeProvider/useTheme';
 
-type BadgeProps = {
+export type BadgeProps = {
 	text: string;
 	variant?: 'success' | 'warning' | 'error';
 };
 
-const Badge: FC<BadgeProps> = ({ text, variant = 'success' }) => {
+export const Badge: FC<BadgeProps> = ({ text, variant = 'success' }) => {
 	const {isDarkMode} = useTheme();
 	return (
 		<span
@@ -18,5 +18,3 @@ const Badge: FC<BadgeProps> = ({ text, variant = 'success' }) => {
 		</span>
 	);
 };
-
-export default Badge;

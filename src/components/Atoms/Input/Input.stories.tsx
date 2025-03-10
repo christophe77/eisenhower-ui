@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import Input from './Lazy';
+import {LazyInput, InputProps} from './Lazy';
 
-const metaInput: Meta<typeof Input> = {
+const metaInput: Meta<InputProps> = {
 	title: 'Components/Atoms/Input',
-	component: Input,
+	component: LazyInput,
 	tags: ['autodocs'],
 	decorators: [
 		(Story) => (
@@ -33,7 +33,7 @@ const metaInput: Meta<typeof Input> = {
 };
 
 export default metaInput;
-type Story = StoryObj<typeof Input>;
+type Story = StoryObj<InputProps>;
 
 export const Default: Story = {
 	args: {

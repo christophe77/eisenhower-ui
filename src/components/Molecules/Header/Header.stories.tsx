@@ -1,15 +1,15 @@
 import { Meta, StoryObj } from '@storybook/react';
-import Header from './Lazy';
-import ThemeProvider from '../../Foundations/ThemeProvider/Lazy';
+import { LazyHeader, HeaderProps } from './Lazy';
+import { LazyThemeProvider } from '../../Foundations/ThemeProvider/Lazy';
 
-const metaHeader: Meta<typeof Header> = {
+const metaHeader: Meta<HeaderProps> = {
 	title: 'Components/Molecules/Header',
-	component: Header,
+	component: LazyHeader,
 	decorators: [
 		(Story) => (
-			<ThemeProvider>
+			<LazyThemeProvider>
 				<Story />
-			</ThemeProvider>
+			</LazyThemeProvider>
 		),
 	],
 	tags: ['autodocs'],
@@ -17,7 +17,7 @@ const metaHeader: Meta<typeof Header> = {
 
 export default metaHeader;
 
-export const Default: StoryObj<typeof Header> = {
+export const Default: StoryObj<HeaderProps> = {
 	args: {
 		title: 'Header Title',
 		items: [

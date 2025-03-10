@@ -1,5 +1,8 @@
 import { lazy } from 'react';
+import type { LanguageSwitcherProps } from '../LanguageSwitcher';
 
-const LanguageSwitcher = lazy(() => import('../LanguageSwitcher'));
+export const LazyLanguageSwitcher = lazy(() =>
+	import('../LanguageSwitcher').then((module) => ({ default: module.LanguageSwitcher })),
+);
 
-export default LanguageSwitcher
+export type { LanguageSwitcherProps };

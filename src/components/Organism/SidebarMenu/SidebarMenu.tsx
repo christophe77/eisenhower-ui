@@ -1,24 +1,24 @@
 import { useState, FC } from 'react';
 import { motion } from 'framer-motion';
 import { designTokens } from '../../../theme/designTokens';
-import Button from '../../Atoms/Button/Lazy';
-import IconButton from '../../Atoms/IconButton/Lazy';
+import {LazyButton} from '../../Atoms/Button/Lazy';
+import {LazyIconButton} from '../../Atoms/IconButton/Lazy';
 
 const menuVariants = {
 	open: { x: 0, opacity: 1 },
 	closed: { x: '-100%', opacity: 0 },
 };
 
-const SidebarMenu: FC = () => {
+export const SidebarMenu: FC = () => {
 	const [isOpen, setIsOpen] = useState(false);
 
 	return (
 		<div className={`bg-[${designTokens.colors.background}]`}>
-			<IconButton
+			<LazyIconButton
 				onClick={() => setIsOpen(!isOpen)}
 			>
 				☰
-			</IconButton>
+			</LazyIconButton>
 
 			<motion.nav
 				initial="closed"
@@ -31,12 +31,12 @@ const SidebarMenu: FC = () => {
 					color: designTokens.colors.textPrimary,
 				}}
 			>
-				<Button
+				<LazyButton
 					className="fixed top-2 left-2"
 					onClick={() => setIsOpen(false)}
 				>
 					✖
-				</Button>
+				</LazyButton>
 
 				<ul className="space-y-4 mt-6">
 					<li>
@@ -55,4 +55,3 @@ const SidebarMenu: FC = () => {
 	);
 };
 
-export default SidebarMenu;

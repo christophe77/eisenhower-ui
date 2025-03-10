@@ -1,5 +1,6 @@
 import { lazy } from 'react';
 
-const LoginForm = lazy(() => import('../LoginForm'));
+export const LazyLoginForm = lazy(() =>
+	import('../LoginForm').then((module) => ({ default: module.LoginForm })),
+);
 
-export default LoginForm

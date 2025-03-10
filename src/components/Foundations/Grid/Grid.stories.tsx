@@ -1,39 +1,39 @@
 import { useState } from 'react';
-import Grid from './Lazy';
-import Button from '../../Atoms/Button/Button';
+import { LazyGrid } from './Lazy';
+import { Button } from '../../Atoms/Button/Button';
 
 export default {
 	title: 'Components/Foundations/Grid',
-	component: Grid,
-	tags: ["autodocs"],
+	component: LazyGrid,
+	tags: ['autodocs'],
 };
 
 export const DefaultGrid = () => (
-	<Grid>
+	<LazyGrid>
 		<div style={{ background: 'lightblue', padding: '1rem' }}>Bloc 1</div>
 		<div style={{ background: 'lightgreen', padding: '1rem' }}>Bloc 2</div>
 		<div style={{ background: 'lightcoral', padding: '1rem' }}>Bloc 3</div>
-	</Grid>
+	</LazyGrid>
 );
 
 export const CenteredGrid = () => (
-	<Grid maxWidth="800px" align="center">
+	<LazyGrid maxWidth="800px" align="center">
 		<div style={{ background: 'lightgray', padding: '1rem' }}>Bloc 1</div>
 		<div style={{ background: 'lightgray', padding: '1rem' }}>Bloc 2</div>
 		<div style={{ background: 'lightgray', padding: '1rem' }}>Bloc 3</div>
-	</Grid>
+	</LazyGrid>
 );
 
 export const FullWidthGrid = () => (
-	<Grid fullWidth>
+	<LazyGrid fullWidth>
 		<div style={{ background: 'lightpink', padding: '1rem' }}>Bloc 1</div>
 		<div style={{ background: 'lightpink', padding: '1rem' }}>Bloc 2</div>
 		<div style={{ background: 'lightpink', padding: '1rem' }}>Bloc 3</div>
-	</Grid>
+	</LazyGrid>
 );
 
 export const SlideInGrid = () => (
-	<Grid
+	<LazyGrid
 		animationType="slide"
 		animationDirection="left"
 		transitionDuration="700ms"
@@ -41,22 +41,25 @@ export const SlideInGrid = () => (
 		<div style={{ background: 'lightblue', padding: '1rem' }}>Bloc 1</div>
 		<div style={{ background: 'lightgreen', padding: '1rem' }}>Bloc 2</div>
 		<div style={{ background: 'lightcoral', padding: '1rem' }}>Bloc 3</div>
-	</Grid>
+	</LazyGrid>
 );
 
 export const BounceGrid = () => (
-	<Grid animationType="bounce" transitionDuration="500ms">
+	<LazyGrid animationType="bounce" transitionDuration="500ms">
 		<div style={{ background: 'lightblue', padding: '1rem' }}>Bloc 1</div>
 		<div style={{ background: 'lightgreen', padding: '1rem' }}>Bloc 2</div>
 		<div style={{ background: 'lightcoral', padding: '1rem' }}>Bloc 3</div>
-	</Grid>
+	</LazyGrid>
 );
 
 export const ScrollAnimatedGrid = () => {
 	const [show, setShow] = useState(true);
-  
+
 	const itemsToShow = 10;
-	const colArray = Array.from({ length: itemsToShow }, (_value, index) => index);
+	const colArray = Array.from(
+		{ length: itemsToShow },
+		(_value, index) => index,
+	);
 
 	return (
 		<>
@@ -65,7 +68,7 @@ export const ScrollAnimatedGrid = () => {
 					Toggle Grid
 				</Button>
 			</div>
-			<Grid animationType="fade" transitionDuration="700ms">
+			<LazyGrid animationType="fade" transitionDuration="700ms">
 				{colArray.map((col, colIndex) => {
 					return (
 						<div
@@ -76,7 +79,7 @@ export const ScrollAnimatedGrid = () => {
 						</div>
 					);
 				})}
-			</Grid>
+			</LazyGrid>
 		</>
 	);
 };

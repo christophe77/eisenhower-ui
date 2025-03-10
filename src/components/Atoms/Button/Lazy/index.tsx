@@ -1,5 +1,8 @@
 import { lazy } from 'react';
+import type { ButtonProps } from '../Button';
 
-const Button = lazy(() => import('../Button'));
+export const LazyButton = lazy(() =>
+	import('../Button').then((module) => ({ default: module.Button })),
+);
 
-export default Button
+export type { ButtonProps };

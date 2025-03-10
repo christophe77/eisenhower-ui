@@ -2,13 +2,13 @@ import { useState, useEffect, FC } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { designTokens } from '../../../theme/designTokens';
 
-interface CarouselProps {
+export interface CarouselProps {
 	images: string[];
 	autoPlay?: boolean;
 	interval?: number;
 }
 
-const Carousel: FC<CarouselProps> = ({
+export const Carousel: FC<CarouselProps> = ({
 	images,
 	autoPlay = true,
 	interval = 3000,
@@ -82,5 +82,3 @@ const Carousel: FC<CarouselProps> = ({
 		</div>
 	);
 };
-
-export default Carousel;

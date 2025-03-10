@@ -1,15 +1,27 @@
 import { FC } from 'react';
 import useLanguage from '../../Foundations/LanguageProvider/useLanguage';
 
-const LanguageSwitcher: FC = () => {
+export type LangDef = {
+	code: string;
+	name: string;
+};
+export type LanguageSwitcherProps = {
+	languageList: LangDef[];
+};
+
+export const LanguageSwitcher: FC<LanguageSwitcherProps> = ({
+	languageList,
+}) => {
 	const { language, setLanguage } = useLanguage();
 	return (
 		<select value={language} onChange={(e) => setLanguage(e.target.value)}>
-			<option value="en">English</option>
-			<option value="fr">Français</option>
-			<option value="es">Español</option>
+			{languageList.map((lang, langIndex) => {
+				return (
+					<option key={`${lang.code}-${langIndex}`} value={lang.code}>
+						{lang.name}
+					</option>
+				);
+			})}
 		</select>
 	);
 };
-
-export default LanguageSwitcher;

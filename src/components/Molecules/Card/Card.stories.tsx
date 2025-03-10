@@ -1,11 +1,11 @@
-import { Meta, StoryObj } from "@storybook/react";
-import Card from "./Lazy";
+import { Meta, StoryObj } from '@storybook/react';
+import { LazyCard, CardProps } from './Lazy';
 
-const metaCard: Meta<typeof Card> = {
-  title: "Components/Molecules/Card",
-  component: Card,
-  tags: ["autodocs"],
-  decorators: [
+const metaCard: Meta<CardProps> = {
+	title: 'Components/Molecules/Card',
+	component: LazyCard,
+	tags: ['autodocs'],
+	decorators: [
 		(Story) => (
 			<div className="flex text-center p-10">
 				<Story />
@@ -16,9 +16,9 @@ const metaCard: Meta<typeof Card> = {
 
 export default metaCard;
 
-export const Default: StoryObj<typeof Card> = {
-  args: {
-    title: "Card Title",
-    description: "This is a simple card description.",
-  },
+export const Default: StoryObj<CardProps> = {
+	args: {
+		title: 'Card Title',
+		description: 'This is a simple card description.',
+	},
 };

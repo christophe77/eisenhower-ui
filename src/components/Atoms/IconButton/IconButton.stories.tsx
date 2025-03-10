@@ -1,9 +1,9 @@
 import { Meta, StoryObj } from "@storybook/react";
-import IconButton from "./Lazy";
+import {LazyIconButton, IconButtonProps} from "./Lazy";
 
-const metaIconButton: Meta<typeof IconButton> = {
+const metaIconButton: Meta<IconButtonProps> = {
   title: "Components/Atoms/IconButton",
-  component: IconButton,
+  component: LazyIconButton,
   tags: ["autodocs"],
   decorators: [
 		(Story) => (
@@ -27,7 +27,7 @@ const metaIconButton: Meta<typeof IconButton> = {
 
 export default metaIconButton;
 
-export const Primary: StoryObj<typeof IconButton> = {
+export const Primary: StoryObj<IconButtonProps> = {
   args: {
     children: "Primary Button",
     variant: "primary",
@@ -35,7 +35,7 @@ export const Primary: StoryObj<typeof IconButton> = {
   },
 };
 
-export const Secondary: StoryObj<typeof IconButton> = {
+export const Secondary: StoryObj<IconButtonProps> = {
   args: {
     children: "Secondary Button",
     variant: "secondary",
@@ -43,7 +43,7 @@ export const Secondary: StoryObj<typeof IconButton> = {
   },
 };
 
-export const Outline: StoryObj<typeof IconButton> = {
+export const Outline: StoryObj<IconButtonProps> = {
   args: {
     children: "Outline Button",
     variant: "outline",
@@ -51,7 +51,7 @@ export const Outline: StoryObj<typeof IconButton> = {
   },
 };
 
-export const Disabled: StoryObj<typeof IconButton> = {
+export const Disabled: StoryObj<IconButtonProps> = {
   args: {
     children: "Disabled Button",
     variant: "primary",
@@ -60,7 +60,7 @@ export const Disabled: StoryObj<typeof IconButton> = {
   },
 };
 
-export const Pending: StoryObj<typeof IconButton> = {
+export const Pending: StoryObj<IconButtonProps> = {
 	args: {
 		children: 'Pending...',
 		variant: 'primary',

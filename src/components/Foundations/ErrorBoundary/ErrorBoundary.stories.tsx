@@ -1,14 +1,14 @@
 import { Meta, StoryObj } from '@storybook/react';
-import ErrorBoundary from './Lazy';
+import { LazyErrorBoundary, ErrorBoundaryProps } from './Lazy';
 
-const metaErrorBoundary: Meta<typeof ErrorBoundary> = {
+const metaErrorBoundary: Meta<ErrorBoundaryProps> = {
 	title: 'Components/Foundations/ErrorBoundary',
-	component: ErrorBoundary,
+	component: LazyErrorBoundary,
 	decorators: [
 		(Story) => (
-			<ErrorBoundary componentName={"ErrorBoundary"}>
+			<LazyErrorBoundary componentName={'ErrorBoundary'}>
 				<Story />
-			</ErrorBoundary>
+			</LazyErrorBoundary>
 		),
 	],
 	tags: ['autodocs'],
@@ -16,7 +16,7 @@ const metaErrorBoundary: Meta<typeof ErrorBoundary> = {
 
 export default metaErrorBoundary;
 
-export const Default: StoryObj<typeof ErrorBoundary> = {};
+export const Default: StoryObj<ErrorBoundaryProps> = {};
 
 export const WithoutError = () => (
 	<div style={{ background: 'yellow', padding: '1rem' }}>

@@ -1,9 +1,9 @@
-import SidebarMenu from "./Lazy";
+import { LazySidebarMenu } from './Lazy';
 
 export default {
-  title: "Components/Organisms/SidebarMenu",
-  component: SidebarMenu,
-  tags: ["autodocs"],
+	title: 'Components/Organisms/SidebarMenu',
+	component: LazySidebarMenu,
+	tags: ['autodocs'],
 };
 
-export const Default = () => <SidebarMenu />;
+export const Default = () => <LazySidebarMenu />;

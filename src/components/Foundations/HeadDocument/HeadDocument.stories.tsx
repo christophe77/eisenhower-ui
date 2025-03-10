@@ -1,9 +1,9 @@
 import { Meta, StoryObj } from '@storybook/react';
-import HeadDocument from './Lazy';
+import { LazyHeadDocument, HeadDocumentProps } from './Lazy';
 
-const metaHeadDocument: Meta<typeof HeadDocument> = {
+const metaHeadDocument: Meta<HeadDocumentProps> = {
 	title: 'Components/Foundations/HeadDocument',
-	component: HeadDocument,
+	component: LazyHeadDocument,
 	argTypes: {
 		title: { control: 'text', defaultValue: 'eisenhower-ui' },
 		metas: [],
@@ -23,11 +23,11 @@ const links = [
 ];
 
 export const WithMetas = () => (
-	<HeadDocument metas={metas} links={links}>
+	<LazyHeadDocument metas={metas} links={links}>
 		<div className="block">
 			Meta title : {document.getElementsByTagName('title').item.name}
 			Meta description :{' '}
 			{document.getElementsByTagName('description').item.name}
 		</div>
-	</HeadDocument>
+	</LazyHeadDocument>
 );

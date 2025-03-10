@@ -1,5 +1,5 @@
 import { lazy } from 'react';
 
-const ThemeSwitcher = lazy(() => import('../ThemeSwitcher'));
-
-export default ThemeSwitcher
+export const LazyThemeSwitcher = lazy(() =>
+	import('../ThemeSwitcher').then((module) => ({ default: module.ThemeSwitcher })),
+);

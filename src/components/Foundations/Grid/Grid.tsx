@@ -9,7 +9,7 @@ import {
 import { useInView } from 'react-intersection-observer';
 import { designTokens } from '../../../theme/designTokens';
 
-interface GridProps {
+export interface GridProps {
 	columns?: number;
 	sm?: number;
 	md?: number;
@@ -38,7 +38,7 @@ interface GridProps {
 	className?: string;
 }
 
-const Grid: FC<GridProps> = ({
+export const Grid: FC<GridProps> = ({
 	columns = 3,
 	sm = 1,
 	md = 2,
@@ -158,5 +158,3 @@ const Grid: FC<GridProps> = ({
 		</div>
 	);
 };
-
-export default Grid;

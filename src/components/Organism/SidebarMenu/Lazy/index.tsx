@@ -1,5 +1,6 @@
 import { lazy } from 'react';
 
-const SidebarMenu = lazy(() => import('../SidebarMenu'));
+export const LazySidebarMenu = lazy(() =>
+	import('../SidebarMenu').then((module) => ({ default: module.SidebarMenu })),
+);
 
-export default SidebarMenu

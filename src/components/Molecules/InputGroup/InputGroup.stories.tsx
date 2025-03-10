@@ -1,16 +1,16 @@
-import { Meta, StoryObj } from "@storybook/react";
-import InputGroup from "./Lazy";
+import { Meta, StoryObj } from '@storybook/react';
+import { LazyInputGroup, InputGroupProps } from './Lazy';
 
-const metaInputGroup: Meta<typeof InputGroup> = {
-  title: "Components/Molecules/InputGroup",
-  component: InputGroup,
+const metaInputGroup: Meta<InputGroupProps> = {
+	title: 'Components/Molecules/InputGroup',
+	component: LazyInputGroup,
 };
 
 export default metaInputGroup;
 
-export const Default: StoryObj<typeof InputGroup> = {
-  args: {
-    placeholder: "Enter text...",
-    buttonText: "Submit",
-  },
+export const Default: StoryObj<InputGroupProps> = {
+	args: {
+		placeholder: 'Enter text...',
+		buttonText: 'Submit',
+	},
 };

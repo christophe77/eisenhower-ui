@@ -1,5 +1,8 @@
 import { lazy } from 'react';
+import type { ThemeProviderProps } from '../ThemeProvider';
 
-const ThemeProvider = lazy(() => import('../ThemeProvider'));
+export const LazyThemeProvider = lazy(() =>
+	import('../ThemeProvider').then((module) => ({ default: module.ThemeProvider })),
+);
 
-export default ThemeProvider
+export type { ThemeProviderProps };

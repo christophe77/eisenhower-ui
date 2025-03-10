@@ -1,5 +1,8 @@
 import { lazy } from 'react';
+import type { ToolTipProps } from '../ToolTip';
 
-const Input = lazy(() => import('../ToolTip'));
+export const LazyToolTip = lazy(() =>
+	import('../ToolTip').then((module) => ({ default: module.Tooltip })),
+);
 
-export default Input
+export type { ToolTipProps };

@@ -1,12 +1,12 @@
 import { FC, ReactNode, useTransition } from 'react';
 import { designTokens } from '../../../theme/designTokens';
 
-type FormProps = {
+export type FormProps = {
 	action?: (formData: FormData) => void | Promise<void>;
 	children?: ReactNode;
 };
 
-const Form: FC<FormProps> = ({
+export const Form: FC<FormProps> = ({
 	action = () => {
 		console.log('empty action');
 	},
@@ -28,5 +28,3 @@ const Form: FC<FormProps> = ({
 		</form>
 	);
 };
-
-export default Form;

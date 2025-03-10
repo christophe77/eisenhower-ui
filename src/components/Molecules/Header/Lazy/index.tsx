@@ -1,5 +1,8 @@
 import { lazy } from 'react';
+import type { HeaderProps } from '../Header';
 
-const Header = lazy(() => import('../Header'));
+export const LazyHeader = lazy(() =>
+	import('../Header').then((module) => ({ default: module.Header })),
+);
 
-export default Header
+export type { HeaderProps };

@@ -1,17 +1,17 @@
 import { Meta, StoryObj } from '@storybook/react';
-import LanguageSwitcher from './Lazy';
-import LanguageProvider from '../../Foundations/LanguageProvider/Lazy';
+import { LanguageSwitcherProps, LazyLanguageSwitcher } from './Lazy';
+import { LazyLanguageProvider } from '../../Foundations/LanguageProvider/Lazy';
 
-const metaLanguageSwitcher: Meta<typeof LanguageSwitcher> = {
+const metaLanguageSwitcher: Meta<LanguageSwitcherProps> = {
 	title: 'Components/Molecules/LanguageSwitcher',
-	component: LanguageSwitcher,
+	component: LazyLanguageSwitcher,
 	decorators: [
 		(Story) => (
-			<LanguageProvider>
+			<LazyLanguageProvider>
 				<div className="p-5">
 					<Story />
 				</div>
-			</LanguageProvider>
+			</LazyLanguageProvider>
 		),
 	],
 	tags: ['autodocs'],
@@ -19,4 +19,11 @@ const metaLanguageSwitcher: Meta<typeof LanguageSwitcher> = {
 
 export default metaLanguageSwitcher;
 
-export const Default: StoryObj<typeof LanguageSwitcher> = {};
+export const Default: StoryObj<LanguageSwitcherProps> = {
+	args: {
+		languageList: [
+			{ code: 'fr', name: 'Français' },
+			{ code: 'en', name: 'English' },
+		],
+	},
+};

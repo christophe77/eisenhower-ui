@@ -1,7 +1,10 @@
 import { FC, ReactNode, useState, useMemo } from 'react';
 import { LanguageContext } from './LanguageContext';
 
-const LanguageProvider: FC<{ children: ReactNode }> = ({ children }) => {
+export type LanguageProviderProps = {
+	children: ReactNode
+}
+export const LanguageProvider: FC<LanguageProviderProps> = ({ children }) => {
 	const [language, setLanguage] = useState('en');
 	const value = useMemo(
 		() => ({ language, setLanguage }),
@@ -14,4 +17,3 @@ const LanguageProvider: FC<{ children: ReactNode }> = ({ children }) => {
 		</LanguageContext.Provider>
 	);
 };
-export default LanguageProvider;

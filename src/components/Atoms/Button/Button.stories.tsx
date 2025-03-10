@@ -1,18 +1,18 @@
 import { Meta, StoryObj } from '@storybook/react';
-import Button from './Lazy';
-import ThemeProvider from '../../Foundations/ThemeProvider/Lazy';
+import { LazyButton, ButtonProps } from './Lazy';
+import { LazyThemeProvider } from '../../Foundations/ThemeProvider/Lazy';
 
-const metaButton: Meta<typeof Button> = {
+const metaButton: Meta<ButtonProps> = {
 	title: 'Components/Atoms/Button',
-	component: Button,
+	component: LazyButton,
 	tags: ['autodocs'],
 	decorators: [
 		(Story) => (
-			<ThemeProvider>
+			<LazyThemeProvider>
 				<div className="p-5">
 					<Story />
 				</div>
-			</ThemeProvider>
+			</LazyThemeProvider>
 		),
 	],
 	argTypes: {
@@ -30,7 +30,7 @@ const metaButton: Meta<typeof Button> = {
 
 export default metaButton;
 
-export const Primary: StoryObj<typeof Button> = {
+export const Primary: StoryObj<ButtonProps> = {
 	args: {
 		children: 'Primary Button',
 		variant: 'primary',
@@ -38,7 +38,7 @@ export const Primary: StoryObj<typeof Button> = {
 	},
 };
 
-export const Secondary: StoryObj<typeof Button> = {
+export const Secondary: StoryObj<ButtonProps> = {
 	args: {
 		children: 'Secondary Button',
 		variant: 'secondary',
@@ -46,7 +46,7 @@ export const Secondary: StoryObj<typeof Button> = {
 	},
 };
 
-export const Outline: StoryObj<typeof Button> = {
+export const Outline: StoryObj<ButtonProps> = {
 	args: {
 		children: 'Outline Button',
 		variant: 'outline',
@@ -54,7 +54,7 @@ export const Outline: StoryObj<typeof Button> = {
 	},
 };
 
-export const Disabled: StoryObj<typeof Button> = {
+export const Disabled: StoryObj<ButtonProps> = {
 	args: {
 		children: 'Disabled Button',
 		variant: 'primary',
@@ -63,7 +63,7 @@ export const Disabled: StoryObj<typeof Button> = {
 	},
 };
 
-export const Pending: StoryObj<typeof Button> = {
+export const Pending: StoryObj<ButtonProps> = {
 	args: {
 		children: 'Pending...',
 		variant: 'primary',

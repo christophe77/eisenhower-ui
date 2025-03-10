@@ -1,5 +1,8 @@
 import { lazy } from 'react';
+import type { CarouselProps } from '../Carousel';
 
-const Carousel = lazy(() => import('../Carousel'));
+export const LazyCarousel = lazy(() =>
+	import('../Carousel').then((module) => ({ default: module.Carousel })),
+);
 
-export default Carousel
+export type { CarouselProps };

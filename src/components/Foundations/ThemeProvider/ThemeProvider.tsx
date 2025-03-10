@@ -2,7 +2,11 @@ import { useState, FC, ReactNode, useMemo } from 'react';
 import { designTokens } from '../../../theme/designTokens';
 import { ThemeContext } from './ThemeContext';
 
-const ThemeProvider: FC<{ children: ReactNode }> = ({ children }) => {
+export type ThemeProviderProps = {
+	children: ReactNode
+}
+
+export const ThemeProvider: FC<ThemeProviderProps> = ({ children }) => {
 	const [isDarkMode, setIsDarkMode] = useState(true);
 
 	const toggleTheme = () => setIsDarkMode((prev) => !prev);
@@ -27,4 +31,3 @@ const ThemeProvider: FC<{ children: ReactNode }> = ({ children }) => {
 		</ThemeContext.Provider>
 	);
 };
-export default ThemeProvider

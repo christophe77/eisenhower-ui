@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { ReactNode, FC } from 'react';
 
 type Link = {
 	rel: string;
@@ -8,13 +8,18 @@ type Meta = {
 	name: string;
 	content: string;
 };
-interface HeadDocumentProps {
+export interface HeadDocumentProps {
 	title?: string;
 	metas?: Meta[];
 	links?: Link[];
 	children?: ReactNode;
 }
-const HeadDocument = ({ title = '', metas, links, children }: HeadDocumentProps) => {
+export const HeadDocument: FC<HeadDocumentProps> = ({
+	title = '',
+	metas,
+	links,
+	children,
+}) => {
 	return (
 		<>
 			<title>{title}</title>
@@ -36,4 +41,3 @@ const HeadDocument = ({ title = '', metas, links, children }: HeadDocumentProps)
 		</>
 	);
 };
-export default HeadDocument;

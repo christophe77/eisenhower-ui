@@ -1,5 +1,8 @@
 import { lazy } from 'react';
+import type { BaseTemplateProps } from '../BaseTemplate';
 
-const BaseTemplate = lazy(() => import('../BaseTemplate'));
+export const LazyBaseTemplate = lazy(() =>
+	import('../BaseTemplate').then((module) => ({ default: module.BaseTemplate })),
+);
 
-export default BaseTemplate
+export type { BaseTemplateProps };

@@ -1,5 +1,8 @@
 import { lazy } from 'react';
+import type { IconButtonProps } from '../IconButton';
 
-const IconButton = lazy(() => import('../IconButton'));
+export const LazyIconButton = lazy(() =>
+	import('../IconButton').then((module) => ({ default: module.IconButton })),
+);
 
-export default IconButton
+export type { IconButtonProps };

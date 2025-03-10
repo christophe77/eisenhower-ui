@@ -1,5 +1,8 @@
 import { lazy } from 'react';
+import type { AskGptChatProps } from '../AskGptChat';
 
-const AskGptChat = lazy(() => import('../AskGptChat'));
+export const LazyAskGptChat = lazy(() =>
+	import('../AskGptChat').then((module) => ({ default: module.AskGptChat })),
+);
 
-export default AskGptChat
+export type { AskGptChatProps };

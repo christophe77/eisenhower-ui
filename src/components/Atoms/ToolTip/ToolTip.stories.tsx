@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import ToolTip from  './Lazy';
+import { LazyToolTip, ToolTipProps } from './Lazy';
 
-const metaToolTip: Meta<typeof ToolTip> = {
+const metaToolTip: Meta<ToolTipProps> = {
 	title: 'Components/Atoms/ToolTip',
-	component: ToolTip,
+	component: LazyToolTip,
 	tags: ['autodocs'],
 	decorators: [
 		(Story) => (
@@ -12,25 +12,25 @@ const metaToolTip: Meta<typeof ToolTip> = {
 			</div>
 		),
 	],
-    argTypes: {
-        text: {
-          control: "text"
-        },
-        position: {
-          control: "select",
-          options: ['top', 'bottom', 'left', 'right'],
-        }
-      },
+	argTypes: {
+		text: {
+			control: 'text',
+		},
+		position: {
+			control: 'select',
+			options: ['top', 'bottom', 'left', 'right'],
+		},
+	},
 };
 
 export default metaToolTip;
-type Story = StoryObj<typeof ToolTip>;
+type Story = StoryObj<ToolTipProps>;
 
 export const Default: Story = {
 	args: {
 		text: 'Default : top',
 		position: 'top',
-        children: "Default top tooltip",
+		children: 'Default top tooltip',
 	},
 };
 
@@ -38,15 +38,15 @@ export const Bottom: Story = {
 	args: {
 		text: 'Bottom',
 		position: 'bottom',
-        children: "Bottom tooltip",
+		children: 'Bottom tooltip',
 	},
 };
 
 export const Left: Story = {
 	args: {
-        text: 'Left',
+		text: 'Left',
 		position: 'left',
-        children: "Left tooltip",
+		children: 'Left tooltip',
 	},
 };
 
@@ -54,6 +54,6 @@ export const Right: Story = {
 	args: {
 		text: 'Right',
 		position: 'right',
-        children: "Right tooltip",
+		children: 'Right tooltip',
 	},
 };

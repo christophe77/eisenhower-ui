@@ -1,9 +1,9 @@
 import { Meta, StoryObj } from '@storybook/react';
-import AskGptChat from './Lazy';
+import { LazyAskGptChat } from './Lazy';
 
 export default {
 	title: 'components/Organisms/AskGptChat',
-	component: AskGptChat,
+	component: LazyAskGptChat,
 	decorators: [
 		(Story) => (
 			<div className="flex text-center p-10">
@@ -13,7 +13,7 @@ export default {
 	],
 } as Meta;
 
-export const Default: StoryObj<typeof AskGptChat> = {
+export const Default: StoryObj<typeof LazyAskGptChat> = {
 	args: {
 		REACT_APP_OPENAI_API_KEY: 'fakekey',
 	},

@@ -1,0 +1,1 @@
+{"version":3,"file":"LanguageContext.d.ts","sourceRoot":"","sources":["../../../../../src/components/Foundations/LanguageProvider/LanguageContext.tsx"],"names":[],"mappings":"AAEA,MAAM,WAAW,mBAAmB;IACnC,QAAQ,EAAE,MAAM,CAAC;IACjB,WAAW,EAAE,CAAC,IAAI,EAAE,MAAM,KAAK,IAAI,CAAC;CACpC;AAED,eAAO,MAAM,eAAe,0DAK1B,CAAC"}

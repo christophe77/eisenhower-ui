@@ -1,9 +1,9 @@
 import { Meta, StoryObj } from '@storybook/react';
-import Avatar from './Lazy';
+import { LazyAvatar, AvatarProps } from './Lazy';
 
-const metaAvatar: Meta<typeof Avatar> = {
+const metaAvatar: Meta<AvatarProps> = {
 	title: 'Components/Atoms/Avatar',
-	component: Avatar,
+	component: LazyAvatar,
 	tags: ['autodocs'],
 	decorators: [
 		(Story) => (
@@ -23,7 +23,7 @@ const metaAvatar: Meta<typeof Avatar> = {
 
 export default metaAvatar;
 
-export const Small: StoryObj<typeof Avatar> = {
+export const Small: StoryObj<AvatarProps> = {
 	args: {
 		imgSrc: 'https://placehold.co/40',
 		size: 'sm',
@@ -31,7 +31,7 @@ export const Small: StoryObj<typeof Avatar> = {
 	},
 };
 
-export const Medium: StoryObj<typeof Avatar> = {
+export const Medium: StoryObj<AvatarProps> = {
 	args: {
 		imgSrc: 'https://placehold.co/60',
 		size: 'md',
@@ -39,7 +39,7 @@ export const Medium: StoryObj<typeof Avatar> = {
 	},
 };
 
-export const Large: StoryObj<typeof Avatar> = {
+export const Large: StoryObj<AvatarProps> = {
 	args: {
 		imgSrc: 'https://placehold.co/80',
 		size: 'lg',

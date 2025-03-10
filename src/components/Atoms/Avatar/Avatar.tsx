@@ -1,12 +1,12 @@
 import { FC } from 'react';
 
-type AvatarProps = {
+export type AvatarProps = {
 	imgSrc: string;
 	alt: string;
 	size?: 'sm' | 'md' | 'lg';
 };
 
-const Avatar: FC<AvatarProps> = ({ imgSrc, alt, size = 'md' }) => {
+export const Avatar: FC<AvatarProps> = ({ imgSrc, alt, size = 'md' }) => {
 	const sizeClasses = {
 		sm: 'w-8 h-8',
 		md: 'w-12 h-12',
@@ -17,5 +17,3 @@ const Avatar: FC<AvatarProps> = ({ imgSrc, alt, size = 'md' }) => {
 		<img src={imgSrc} alt={alt} className={`rounded-full ${sizeClasses[size]}`} />
 	);
 };
-
-export default Avatar;

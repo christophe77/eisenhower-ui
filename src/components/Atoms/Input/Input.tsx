@@ -1,7 +1,7 @@
 import {InputHTMLAttributes, FC, ReactNode} from "react";
 import { designTokens } from "../../../theme/designTokens";
 
-interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
+export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   label?: string;
   error?: string;
   success?: boolean;
@@ -9,7 +9,7 @@ interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   icon?: ReactNode;
 }
 
-const Input: FC<InputProps> = ({
+export const Input: FC<InputProps> = ({
   type = "text",
   label,
   error,
@@ -49,5 +49,3 @@ const Input: FC<InputProps> = ({
     </div>
   );
 };
-
-export default Input;

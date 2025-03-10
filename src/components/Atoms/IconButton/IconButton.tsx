@@ -3,7 +3,7 @@ import clsx from 'clsx';
 import { motion } from 'framer-motion';
 import { designTokens } from '../../../theme/designTokens';
 
-type IconButtonProps = {
+export type IconButtonProps = {
 	variant?: 'primary' | 'secondary' | 'outline';
 	size?: 'sm' | 'md' | 'lg';
 	children?: ReactNode;
@@ -13,7 +13,7 @@ type IconButtonProps = {
     className?:string;
 };
 
-const IconButton: FC<IconButtonProps> = ({
+export const IconButton: FC<IconButtonProps> = ({
 	variant = 'primary',
 	size = 'md',
 	children,
@@ -67,5 +67,3 @@ const IconButton: FC<IconButtonProps> = ({
 		</motion.button>
 	);
 };
-
-export default IconButton;

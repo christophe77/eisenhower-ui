@@ -1,11 +1,11 @@
 import { FC } from 'react';
 import { designTokens } from '../../../theme/designTokens';
-import ThemeSwitcher from '../ThemeSwitcher/ThemeSwitcher';
+import { ThemeSwitcher } from '../ThemeSwitcher/ThemeSwitcher';
 import useTheme from '../../Foundations/ThemeProvider/useTheme';
-import SidebarMenu from '../../Organism/SidebarMenu/SidebarMenu';
-import Tooltip from '../../Atoms/ToolTip/ToolTip';
+import { SidebarMenu } from '../../Organism/SidebarMenu/SidebarMenu';
+import { Tooltip } from '../../Atoms/ToolTip/ToolTip';
 
-type HeaderProps = {
+export type HeaderProps = {
 	title: string;
 	items: {
 		name: string;
@@ -13,7 +13,7 @@ type HeaderProps = {
 	}[];
 };
 
-const Header: FC<HeaderProps> = ({ title = '', items = [] }: HeaderProps) => {
+export const Header: FC<HeaderProps> = ({ title = '', items = [] }) => {
 	const { isDarkMode } = useTheme();
 	return (
 		<header
@@ -38,11 +38,12 @@ const Header: FC<HeaderProps> = ({ title = '', items = [] }: HeaderProps) => {
 					</li>
 				))}
 			</ul>
-			<Tooltip text={`Set dark mode ${isDarkMode ? 'OFF' : 'ON'}`} position='left'>
+			<Tooltip
+				text={`Set dark mode ${isDarkMode ? 'OFF' : 'ON'}`}
+				position="left"
+			>
 				<ThemeSwitcher />
 			</Tooltip>
 		</header>
 	);
 };
-
-export default Header;

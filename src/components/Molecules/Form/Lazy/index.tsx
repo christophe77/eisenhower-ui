@@ -1,5 +1,8 @@
 import { lazy } from 'react';
+import type { FormProps } from '../Form';
 
-const Form = lazy(() => import('../Form'));
+export const LazyForm = lazy(() =>
+	import('../Form').then((module) => ({ default: module.Form })),
+);
 
-export default Form
+export type { FormProps };

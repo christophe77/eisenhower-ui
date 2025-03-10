@@ -1,2 +1,0 @@
-const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["./Button-DJYpCBvH.js","./jsx-runtime-D_zvdyIk.js","./index-DmM0KDA7.js","./clsx-B-dksMZM.js","./designTokens-9Zu84yzh.js","./useTheme-DrQdFbE0.js","./ThemeContext-Dz4fsFzT.js","./proxy-CEIfVRbT.js"])))=>i.map(i=>d[i]);
-import{_ as r}from"./iframe-B77-k6Rq.js";import{r as t}from"./index-DmM0KDA7.js";const a=t.lazy(()=>r(()=>import("./Button-DJYpCBvH.js"),__vite__mapDeps([0,1,2,3,4,5,6,7]),import.meta.url));export{a as B};

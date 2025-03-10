@@ -1,13 +1,13 @@
 import { Meta, StoryObj } from '@storybook/react';
-import Form from './Form';
-import Button from '../../Atoms/Button/Lazy';
-import Input from '../../Atoms/Input/Lazy';
+import { Form, FormProps } from './Form';
+import { LazyButton } from '../../Atoms/Button/Lazy';
+import { LazyInput } from '../../Atoms/Input/Lazy';
 
 function timeout(ms: number) {
 	return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
-const metaForm: Meta<typeof Form> = {
+const metaForm: Meta<FormProps> = {
 	title: 'Components/Molecules/Form',
 	component: Form,
 	tags: ['autodocs'],
@@ -23,24 +23,24 @@ const metaForm: Meta<typeof Form> = {
 
 export default metaForm;
 
-export const Default: StoryObj<typeof Form> = {
+export const Default: StoryObj<FormProps> = {
 	args: {
 		children: (
 			<div>
-				Name : <Input type="text" />
-				Tel : <Input type="tel" />
+				Name : <LazyInput type="text" />
+				Tel : <LazyInput type="tel" />
 			</div>
 		),
 	},
 };
 
-export const WithAction: StoryObj<typeof Form> = {
+export const WithAction: StoryObj<FormProps> = {
 	args: {
 		children: (
 			<div>
-				Name : <Input type="text" />
-				Tel : <Input type="tel" />
-				<Button type="submit">Submit</Button>
+				Name : <LazyInput type="text" />
+				Tel : <LazyInput type="tel" />
+				<LazyButton type="submit">Submit</LazyButton>
 			</div>
 		),
 		action: async (formData: FormData) => {
